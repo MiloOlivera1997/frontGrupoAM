@@ -577,7 +577,7 @@
 
     </div>
   </div>
-  <form class="form" id="tuFormulario" action="http://localhost:3000/reservar" method="POST">
+  <form class="form" id="tuFormulario" action="https://backgrupoam.onrender.com/reservar" method="POST">
     <h4 data-section="formulario" data-value="formulario_reserva">Formulario de Reserva</h4>
     <div class="container-form"> <label data-section="formulario_reserva" data-value="nombre">Nombre:</label><input
         type="text" id="nombre" name="nombre" placeholder="Nombre">
@@ -731,7 +731,7 @@
 
       console.log("Datos enviados:", reservaData);
 
-      fetch("http://localhost:3000/reservar", {
+      fetch("https://backgrupoam.onrender.com/reservar", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
