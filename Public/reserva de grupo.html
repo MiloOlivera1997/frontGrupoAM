@@ -576,7 +576,8 @@
       </select>
 
     </div>
-    <div id="mensaje-reserva" style="margin-top: 15px; font-weight: bold;"></div>
+   <div id="mensaje-reserva" style="margin-top: 10px; font-weight: bold;"></div>
+
 
   </div>
   <form class="form" id="tuFormulario" action="https://backgrupoam.onrender.com/reservar" method="POST">
@@ -760,7 +761,10 @@ fetch("https://backgrupoam.onrender.com/reservar", {
     mensaje.textContent = "Error al conectar con el servidor.";
     mensaje.style.color = "red";
   });
-
+  setTimeout(() => {
+    mensaje.textContent = "";
+  }, 5000);
+})
   </script>
 
 
