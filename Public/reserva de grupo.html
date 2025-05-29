@@ -576,6 +576,8 @@
       </select>
 
     </div>
+    <div id="mensaje-reserva" style="margin-top: 15px; font-weight: bold;"></div>
+
   </div>
   <form class="form" id="tuFormulario" action="https://backgrupoam.onrender.com/reservar" method="POST">
     <h4 data-section="formulario" data-value="formulario_reserva">Formulario de Reserva</h4>
@@ -731,21 +733,34 @@
 
       console.log("Datos enviados:", reservaData);
 
-      fetch("https://backgrupoam.onrender.com/reservar", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(reservaData)
-      })
-        .then(response => response.json())
-        .then(data => {
-          console.log("Reserva enviada:", data);
-        })
-        .catch(error => {
-          console.error("Error al enviar la reserva:", error);
-        });
-    });
+fetch("https://backgrupoam.onrender.com/reservar", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(reservaData)
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log("Reserva enviada:", data);
+    
+    const mensaje = document.getElementById("mensaje-reserva");
+
+    if (data.message === "Reserva realizada correctamente") {
+      mensaje.textContent = "¡Reserva realizada correctamente!";
+      mensaje.style.color = "green";
+    } else {
+      mensaje.textContent = "Error: " + (data.error || "No se pudo procesar la reserva.");
+      mensaje.style.color = "red";
+    }
+  })
+  .catch(error => {
+    console.error("Error al enviar la reserva:", error);
+    const mensaje = document.getElementById("mensaje-reserva");
+    mensaje.textContent = "Error al conectar con el servidor.";
+    mensaje.style.color = "red";
+  });
+
   </script>
 
 
