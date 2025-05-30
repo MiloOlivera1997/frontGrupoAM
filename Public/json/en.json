@@ -1,0 +1,263 @@
+{
+  "Menu principal": {
+    "menu": "Menu",
+    "restaurants": "Restaurants",
+    "item1": "Group Reservation",
+    "item2": "Recipe & Cooking",
+    "item3": "Family",
+    "item4": "History & Legacy",
+    "item5": "Work with Us"
+  },
+  "Restaurantes": {
+    "description": "There are corners that you don't look for, you find them. Padilla was just that: a revelation amidst the pasos and drums of Semana Santa. With the soul of a bodegón and the murmur of a kitchen that never shuts up, this was the origin of it all. This is where our first recipes and thousands of stories that still float in the air were born.",
+    "description2":"The sun shines through the windows and bathes each table as if it were embracing us. Esquina Plaza Camas has opened its doors and with them, a new stage. Everything here is big: the light, the space, the desire. But it is also intimate, close, as if this corner had been waiting for us. Today, as always, we cook so that every visit feels like coming home.",
+    "description3":"In the heart of Malaga there was a forgotten corner. Today it beats strongly. Esquina Granada is tapas, paellas, wine and joy. A place full of energy in the heart of the historic centre, where everything flows with its own rhythm, without ever losing the soul with which it was born.",
+    "item6": "REVIEWS",
+    "item7": "SCHEDULES",
+    "item8": "Monday",
+    "item8b":"13:00-23:30",
+    "item9": "Tuesday: ",
+    "item9b":"Close",
+    "item10": "Wednesday: ",
+    "item10b":"Close",
+    "item10c":"13:00-23:30",
+    "item11": "Thursday",
+    "item11b":"13:00-23:30",
+    "item12": "Friday",
+    "item12b":"13:00-23:30",
+    "item13": "Saturday",
+    "item13b":"13:00-23:30",
+    "item14": "Sunday",
+    "item14b":"13:00-23:30",
+    "item15": "MENU",
+"item16": "RESERVATION"
+
+  },
+
+  
+   "reserva":{
+    "R1": "GROUP BOOKING",
+    "R2": "£25 Menu",
+    "R3": "Starter",
+    "R4": "Russian Salad",
+    "R5": "Grilled Baby Squid",
+    "R6": "Baked Ham Shank",
+    "R7": "Meat Pastry",
+    "R8": "Croquettes",
+    "R9": "Main Course",
+    "R10": "Padilla Burger",
+    "R11": "Padilla Salad",
+    "R12": "Breaded Beef with Fried Egg",
+    "R13": "Dessert",
+    "R14": "Catalan Cream",
+    "R15": "Cheesecake",
+    "R16": "Coffee or Herbal Tea",
+    "R17": "£35 Menu",
+    "R18": "Spicy Fried Potatoes",
+    "R19": "Fried Aubergine with Cane Honey",
+    "R20": "Broken Eggs with Ham",
+    "R21": "Fried Baby Squid",
+    "R22": "Pork Cheek Stew",
+    "R23": "Seafood Paella",
+    "R24": "Vegetable Paella",
+    "R25": "Chicken Paella",
+    "R26": "£45 Menu",
+    "R27": "Drink",
+    "R28": "Beer",
+    "R29": "Sangria",
+    "R30": "Summer Red Wine Spritzer",
+    "R31": "Unlimited Soft Drinks for 1h30min",
+    "R32": "Booking Form",
+    "R33": "Name:",
+    "R34": "Contact Number:",
+    "R35": "Email:",
+    "R36": "Number of Guests:",
+    "R37": "Selected Menu",
+    "R38": "-Select-",
+    "R39": "Select a Date:",
+    "R40": "Select a Time:",
+    "R41": "Submit",
+    "R42": "Cancel",
+    "R43": "All group bookings require a £5 deposit per person."
+  },
+  
+  
+    "historias": {
+      "titulo_general": "HISTORY & LEGACY",
+      "padilla_title": "Destiny on a Corner (Padilla)",
+      "padilla_text": "We opened Esquina Padilla without a plan and full of excitement. It was Holy Week—chaos and heart everywhere.\nA half-open kitchen, dishes flying out nonstop, people arriving without knowing what to expect… and staying.\nThat’s when we realized we weren’t just opening a restaurant: we were starting something bigger.\nPadilla wasn’t just the first. It was the place where everything we are today was born.",
+  
+      "granada_title": "A Corner That Fills Up (Granada)",
+      "granada_text": "In the center of Málaga, where nothing used to happen, we bet on another corner.\nEsquina Granada was born with tapas, wine, paellas, and lots of rhythm.\nA casual, energetic place with the same soul, but the fire burning all day.\nLittle by little it filled up. And it never stopped.",
+  
+      "plaza_title": "The Big Step (Plaza Camas)",
+      "plaza_text": "Plaza Camas was love at first sight.\nWe saw that bright corner and knew it had to be part of our story.\nToday it’s the largest in the group, with big windows and sunlight pouring into the kitchen.\nThis restaurant marked the moment we stopped being just an idea and became a real restaurant group.",
+  
+      "legado_title": "Our Legacy Is Cooked in Family",
+      "legado_text": "Beyond walls, what defines us is how we do things.\nFrom the early days until now, we’ve grown from within.\nWaiters who became managers. Cooks who now lead kitchens.\nAnd teams that move between corners so the family spirit is felt everywhere.\nBecause if there’s one thing we want to leave behind, it’s this:\na way of working with joy, treating with care, and living hospitality as it deserves to be lived."
+    },
+  
+    "Recetas":{
+      "RECETA & COCINA": "RECIPE & COOKING",
+      "GAZPACHO": "GAZPACHO",
+      "Ingredientes": "Ingredients",
+       "g1": "2 kg ripe tomatoes",
+        "g2": "10 g garlic (2–3 cloves)",
+         "g3":"120 g red bell pepper",
+         "g4":"120 g green bell pepper",
+         "g5":"50 ml wine vinegar",
+         "g6":"10 g salt",
+         "g7":"260 ml extra virgin olive oil",
+         "g8":"300 ml cold water"
+      ,
+      "Procedimiento": "Instructions",
+        "g9": "Place the tomatoes, peppers, and garlic in the blender jar.",
+        "g10": "Blend for 30 sec / speed 5.",
+        "g11": "Add the vinegar, oil, salt, and water.",
+        "g12":"Blend for 3 min / speed 10.",
+        "g13":"Refrigerate for at least 2 hours before serving. Best served well chilled.",
+         "PAELLA": "PAELLA",
+  "p1": "30g Sofrito",
+  "p2": "140g ladle of Rice",
+  "p3": "460g Broth",
+  "p4": "200g Base (Vegetable/Seafood/Chicken)",
+  "p5": "Preheat the oven to 180 °C.",
+  "p6": "Sauté the sofrito for a few minutes.",
+  "p7": "Add the rice and briefly stir-fry so it absorbs the sofrito.",
+  "p8": "Pour in the hot broth and the base (vegetable, chicken, or seafood), mixing well.",
+  "p9": "Place in the oven and bake for 20 minutes at 180 °C without stirring.",
+  "p10": "Remove, let rest for a few minutes before serving.",
+  "p11": "Chef’s tip: This oven method ensures evenly cooked, fluffy rice, ideal for large batches.",
+  "GAMBAS AL PILPIL": "PRAWNS IN PILPIL SAUCE",
+  "gam1": "200g Olive oil",
+  "gam2": "30g White wine",
+  "gam3": "85g / 5 pcs Prawns",
+  "gam4": "1g / 4 pcs Dried chili peppers",
+  "gam5": "1g Garlic",
+  "gam6": "10g Sweet paprika",
+  "gam7": "0.5g Fresh parsley",
+  "gam8": "Slice the garlic thinly.",
+  "gam9": "Cut the chili peppers if you want more heat (optional).",
+  "gam10": "Finely chop the parsley.",
+  "gam11": "Heat the oil.",
+  "gam12": "In a small pan, heat the olive oil over medium-high heat.",
+  "gam13": "Add the garlic slices and chili peppers. Cook until the garlic starts to turn golden, but don’t let it burn.",
+  "gam14": "Add the prawns.",
+  "gam15": "Pour in the white wine.",
+  "gam16": "Add the sweet paprika. Stir quickly to prevent burning.",
+  "gam17": "Cook for 1–2 minutes on each side until the prawns are pink and fully cooked.",
+  "gam18": "Sprinkle the parsley on top just before serving.",
+  "gam19": "Extra tip: Serve with crusty bread to soak up the flavorful oil — you’ll want to clean the pan!",
+   "SANGRIA": "SANGRIA",
+  "s1": "Create a syrup:",
+  "s2": "1 kg white sugar",
+  "s3": "1 L water",
+  "s4": "2 cinnamon sticks",
+  "s5": "After cooling, add:",
+  "s6": "500 ml Triple sec",
+  "s7": "500 ml brandy",
+  "s8": "500 ml red vermouth",
+  "s9": "500 ml Licor 56 (or any sweet liqueur)",
+  "s10": "500 ml orange juice",
+  "s11": "To use with Tinto de Verano:",
+  "s12": "75 ml premix",
+  "s13": "100 ml soda",
+  "s14": "Plenty of ice",
+  "s15": "Top up with Tinto de Verano",
+  "s16": "Extra tip: If using red wine (choose a light one), replace soda with orange or lemon Fanta.",
+    "CREMA CATALANA": "CREMA CATALANA",
+  "c2": "10 egg yolks",
+  "c3": "1000cc Milk",
+  "c4": "180g Sugar",
+  "c5": "50g Cornstarch",
+  "c6": "5g Ground cinnamon",
+  "c7": "5g Vanilla essence",
+  "c8": "Beat all ingredients for 20 seconds at speed 5 in Thermomix without the butterfly attachment.",
+  "c9": "Then place the butterfly and cook for 13 minutes at speed 2.",
+  "c10": "Add vinegar, oil, salt, and water.",
+  "c11": "Finally, pour into a container and let cool."
+      
+
+      
+      
+    },
+    
+      "Familia": {
+        "familia": "Family",
+        "intro_equipo": "From the kitchen to the dining room, we all wear the same passion on our aprons. Chefs, waiters, managers, head cooks. The role doesn’t matter: here, we all push in the same direction. Because when there’s joy at work, there’s magic at the table.",
+        "secreto_equipo": "Our secret isn’t in a recipe, it’s in the team. And that’s why we take care of it. We laugh together, support each other, and truly know one another. You can feel that energy when you walk through the door of any of our restaurants.",
+        "trabajar_contento": "Working happily is the first step to making others happy. That’s our way of doing things. If there’s joy in the team, there’s warmth in the service. If there’s respect and closeness inside, there’s hospitality and love outside.",
+        "creemos_trabajar_contentos": "We believe in working happily. In greeting each other with a smile and leaving with pride in what we did that day. In learning from experience, sharing the dish, and growing from within. Here, no one is just 'an employee'. We are chefs who dream of new recipes, waiters who know every table, managers who lead with care. We move, we know each other, we take care of one another. We are a group, yes. But above all, we are a family. And when one is happy working, it shows. You feel it. It’s contagious. That’s why hospitality isn’t a technique: it’s a way of being in the world."
+      },
+      
+      
+        "Reserva": {
+          "RESERVA_DE_GRUPO": "GROUP RESERVATION",
+          "entrante": "Starter",
+          "Selecciona tu entrante": "Select your starter",
+          "ENSALADILLA RUSA": "RUSSIAN SALAD",
+          "CROQUETAS": "CROQUETTES",
+          "CHIPIRONES A LA PLANCHA": "GRILLED SQUID",
+          "PATA DE JAMÓN AL HORNO": "ROASTED HAM LEG",
+          "EMPANADILLA DE CARNE": "MEAT EMPANADA",
+      
+          "principal": "Main Course",
+      
+          "HAMBURGUESA PADILLA": "PADILLA BURGER",
+          "ENSALADA PADILLA": "PADILLA SALAD",
+          "MILANESA A CABALLO": "MILANESA A CABALLO",
+      
+          "postre": "Dessert",
+      
+          "Selecciona tu postre": "Select your dessert",
+          "CREMA CATALANA": "CREMA CATALANA",
+          "TARTA DE QUESO": "CHEESECAKE",
+          "CAFÉ O INFUSIÓN": "COFFEE OR INFUSION",
+      
+          "PATATAS BRAVAS": "FRIED POTATOES BRAVAS",
+          "BERENJENAS FRITAS C/MIEL DE CAÑA": "FRIED EGGPLANT WITH CANE HONEY",
+          "HUEVOS ROTOS C/JAMÓN": "BROKEN EGGS WITH HAM",
+          "PUNTILLITAS FRITAS": "FRIED PUNTILLITAS (small squid)",
+      
+          "Selecciona tu principal": "Select your main course",
+          "CARRILLADA": "CARRILLADA",
+          "PAELLA DE MARISCOS": "SEAFOOD PAELLA",
+          "PAELLA DE VEGETALES": "VEGETABLE PAELLA",
+          "PAELLA DE POLLO": "CHICKEN PAELLA",
+      
+          "bebida": "Drink",
+      
+          "Selecciona tu bebida": "Select your drink",
+          "CERVEZA": "BEER",
+          "SANGRIA": "SANGRIA",
+          "TINTO DE VERANO": "TINTO DE VERANO",
+          "GASEOSA ILIMITADA POR 1hs30min": "UNLIMITED SODA FOR 1.5 HOURS"
+        },
+        
+          "formulario": {
+            "formulario_reserva":"formulario reserva",
+            "nombre": "Name",
+            "numero_contacto": "Contact Number",
+            "email": "Email",
+            "cantidad_comensales": "Number of Guests",
+           "menu_elegido": "Chosen Menu",
+           "selecciona_fecha": "Select a date",
+           "selecciona_hora": "Select a time",
+           "enviar": "Submit",
+           "cancelar": "Cancel",
+           "deposit_info": "All group reservations require a deposit of €5 per person."
+          }
+        }
+        
+      
+      
+      
+      
+
+      
+    
+    
+
+  
+  
+  
