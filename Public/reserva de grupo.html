@@ -576,11 +576,12 @@
       </select>
 
     </div>
-   <div id="mensaje-reserva" style="margin-top: 10px; font-weight: bold;"></div>
+
+
 
 
   </div>
-  <form class="form" id="tuFormulario" action="https://backgrupoam.onrender.com/reservar" method="POST">
+  <form class="form" id="tuFormulario">
     <h4 data-section="formulario" data-value="formulario_reserva">Formulario de Reserva</h4>
     <div class="container-form"> <label data-section="formulario_reserva" data-value="nombre">Nombre:</label><input
         type="text" id="nombre" name="nombre" placeholder="Nombre">
@@ -747,30 +748,35 @@ fetch("https://backgrupoam.onrender.com/reservar", {
     
    const mensaje = document.getElementById("mensaje-reserva");
 
-    if (data.message === "Reserva realizada correctamente") {
-      mensaje.textContent = " ¡Reserva realizada correctamente!";
-      mensaje.style.color = "green";
-    } else {
-      mensaje.textContent = " Error: " + (data.error || "No se pudo procesar la reserva.");
-      mensaje.style.color = "red";
-    }
-
+  if (data.message === "Reserva realizada correctamente") {
+  mostrarToast("¡Reserva realizada correctamente!", "success");
+  document.getElementById("tuFormulario").reset();
+  inputMenuTipo.value = "";
+} else {
+  mostrarToast("Error: " + (data.error || "No se pudo procesar la reserva."), "error");
+}
+    function mostrarToast(mensaje, tipo = "success") {
+  const toast = document.getElementById("toast");
+  toast.textContent = mensaje;
+  toast.className = `toast show ${tipo}`;
   
-    setTimeout(() => {
-      mensaje.textContent = "";
-    }, 5000);
-  })
+  setTimeout(() => {
+    toast.classList.remove("show");
+    toast.classList.add("hidden");
+  }, 4000); // Duración visible
+}
   .catch(error => {
     console.error("Error al enviar la reserva:", error);
     const mensaje = document.getElementById("mensaje-reserva");
-    mensaje.textContent = "Error al conectar con el servidor.";
     mensaje.style.color = "red";
+    mostrarToast("Error al conectar con el servidor.", "error");
+
   });
 
   </script>
 
 
-
+ <div id="toast" class="toast hidden"></div>
 </body>
 
 </html>
