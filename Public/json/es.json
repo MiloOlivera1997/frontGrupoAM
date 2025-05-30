@@ -28,7 +28,9 @@
     "item13": "Sábado",
     "item13b": "13:00-23:30",
     "item14": "Domingo",
-    "item14b": "13:00-23:30"
+    "item14b": "13:00-23:30",
+    "item15": "CARTA",
+    "item16": "RESERVA"
   },
   "reserva": {
     "R1": "RESERVA DE GRUPO",

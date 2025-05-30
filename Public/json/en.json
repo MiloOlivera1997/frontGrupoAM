@@ -28,7 +28,10 @@
     "item13": "Saturday",
     "item13b":"13:00-23:30",
     "item14": "Sunday",
-    "item14b":"13:00-23:30"
+    "item14b":"13:00-23:30",
+    "item15": "MENU",
+"item16": "RESERVATION"
+
   },
 
   

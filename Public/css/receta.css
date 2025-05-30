@@ -150,28 +150,32 @@ video {
 }
 
 li {
-  
+
   font-size: 18px;
   color: black;
   font-family: 'Futura0';
 }
+
 ol {
   width: 90%;
 }
-.tip{
+
+.tip {
   width: 90%;
 }
-.text-mo{
+
+.text-mo {
   margin-left: 40px;
 }
 
-.move-text{
-    margin-left: 4rem
+.move-text {
+  margin-left: 4rem
 }
+
 /* imagenes lado derecho*/
 .imagenc {
 
-  
+
   height: 500px;
   width: 500px;
   border: 1px solid black;
@@ -230,7 +234,7 @@ p {
 /* contenedor*/
 .containerpaella {
   border: 4px rgb(3, 83, 109)solid;
-  border-radius:5px;
+  border-radius: 5px;
   padding: 5%;
   text-align: left;
 
@@ -241,10 +245,11 @@ p {
   justify-content: space-between;
   gap: 20px;
 }
-  .hs,
-  .text-mo {
-    margin-left: 0;
-  }
+
+.hs,
+.text-mo {
+  margin-left: 0;
+}
 
 @media (max-width: 768px) {
   .containerpaella {
@@ -254,47 +259,54 @@ p {
     border-radius: 5px;
   }
 
-  .imagenc{
+  .imagenc {
     width: 90%;
-    height: 300px; 
-    margin: 0 15px 0; 
+    height: 300px;
+    margin: 0 15px 0;
     margin-left: 16px;
     border-radius: 3px;
   }
-  
+
   .imagegam {
     width: 90%;
     height: 300px;
-    margin: 0 15px 0; 
+    margin: 0 15px 0;
     margin-left: 16px;
     border-radius: 3px;
   }
-.imagencpaella {
+
+  .imagencpaella {
     width: 90%;
-    height: 300px; 
-    margin: 10px 15px 0; 
+    height: 300px;
+    margin: 10px 15px 0;
     margin-left: 16px;
     border-radius: 3px;
   }
-  .hs{
+
+  .hs {
     text-align: center;
   }
+
   .text-mo {
     margin-left: 0;
   }
-  .move-text{
+
+  .move-text {
     margin-left: 0;
-}
-li{
-  font-size: 15px;
-  margin-right: 12px;
-}
-.Ingrediestes{
-  font-size: 17px;
-}
-.tip{
-  font-size: 17px;
-}
+  }
+
+  li {
+    font-size: 15px;
+    margin-right: 12px;
+  }
+
+  .Ingrediestes {
+    font-size: 17px;
+  }
+
+  .tip {
+    font-size: 17px;
+  }
 
 }
 
@@ -331,6 +343,7 @@ li{
   flex-wrap: wrap;
 
 }
+
 .text-content {
   display: flex;
   flex-direction: column;
@@ -360,14 +373,16 @@ p {
   font-size: 1.2em;
   margin-bottom: 10px;
 }
-.container1 > div,
-.container1 > p {
+
+.container1>div,
+.container1>p {
   max-width: 500px;
 }
+
 /* imagenes */
 .imghs {
   display: flex;
-  gap: 10px; 
+  gap: 10px;
   margin-left: 100px;
 }
 
@@ -375,7 +390,7 @@ p {
   width: 300px;
   height: auto;
   border-radius: 8px;
- 
+
 }
 
 .footer-leg {
@@ -430,114 +445,118 @@ p {
 
 .media {
   display: flex;
-  justify-content: space-between;  
-  align-items: center;  
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
 }
-.icono-home{
+
+.icono-home {
   filter: invert(100%) sepia(95%) saturate(2%) hue-rotate(272deg) brightness(106%) contrast(99%);
   border: 2px solid;
   border-radius: 3px;
   font-size: 20px;
   cursor: pointer;
 }
+
 .footer-j {
-    display: flex;
-    background-color: rgb(238, 232, 218);
-    padding: 40px 40px;
-    font-size: 15px;
-    font-weight: 400;
-    font-family: 'Glomerolus';
-    position: relative; /* necesario para los absolutos */
-    margin-top: 10%;
+  display: flex;
+  background-color: rgb(238, 232, 218);
+  padding: 40px 40px;
+  padding-bottom: 70px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Glomerolus';
+  position: relative;
+  margin-top: 10%;
 }
 
 /* Estilos actuales para pantallas grandes */
 .footer-legal {
-    position: absolute;
-    left: 85rem;
-    cursor: pointer;
+  position: absolute;
+  left: 85rem;
+  cursor: pointer;
 }
 
 .social-icons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-    left: 47%;
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  left: 47%;
+  margin-top: 20px;
 }
 
 .contacto {
-    position: absolute;
-    left: 45%;
+  position: absolute;
+  left: 45%;
 }
 
 .icon-22 {
-    width: 27px;
-    margin-left: 10px;
-    cursor: pointer;
+  width: 27px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .icon-33 {
-    width: 35px;
-    margin-left: 10px;
-    cursor: pointer;
+  width: 35px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .legal {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 767px) {
-    .footer-j {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        position: static; /* quitar posición relativa para evitar problemas */
-        font-size: 14px;
-        margin-top: 10%;
-    }
+  .footer-j {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: static;
+    /* quitar posición relativa para evitar problemas */
+    font-size: 14px;
+    margin-top: 10%;
+  }
 
-    /* Quitar posiciones absolutas para que fluya vertical */
-    .footer-legal,
-    .social-icons,
-    .contacto {
-        position: static;
-        margin: 10px 0;
-        left: auto;
-        top: auto;
-    }
+  /* Quitar posiciones absolutas para que fluya vertical */
+  .footer-legal,
+  .social-icons,
+  .contacto {
+    position: static;
+    margin: 10px 0;
+    left: auto;
+    top: auto;
+  }
 
-    .footer-legal {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
+  .footer-legal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-    .social-icons {
-        justify-content: center;
-        margin-top: 10px;
-    }
+  .social-icons {
+    justify-content: center;
+    margin-top: 10px;
+  }
 
-    .contacto {
-        font-weight: bold;
-    }
+  .contacto {
+    font-weight: bold;
+  }
 
-    /* Ajustar iconos para que no sean tan grandes */
-    .icon-22 {
-        width: 24px;
-        margin-left: 5px;
-    }
+  /* Ajustar iconos para que no sean tan grandes */
+  .icon-22 {
+    width: 24px;
+    margin-left: 5px;
+  }
 
-    .icon-33 {
-        width: 28px;
-        margin-left: 5px;
-    }
+  .icon-33 {
+    width: 28px;
+    margin-left: 5px;
+  }
 }
 
 
@@ -546,151 +565,163 @@ p {
 
 /* Estilo para la barra de navegación */
 nav {
-    z-index: 10;
-    position: relative;
-    width: 100%;
-    
+  z-index: 10;
+  position: relative;
+  width: 100%;
+
 }
 
 /* Contenedor de los elementos del menú */
 .contenedor {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 30px;
-    z-index: 1001
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+  z-index: 1001
 }
 
 /* Botón de menú */
 .menu-btn {
-    background: transparent;
-    color: black;
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
+  background: transparent;
+  color: black;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 
 /* Icono del botón de menú */
 .menu-btn .icon {
-    margin-right: 8px;
-   filter: invert(0%) sepia(5%) saturate(7397%) hue-rotate(340deg) brightness(111%) contrast(99%);
+  margin-right: 8px;
+  filter: invert(0%) sepia(5%) saturate(7397%) hue-rotate(340deg) brightness(111%) contrast(99%);
 }
 
 /* Estilos para el menú desplegable */
 .menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    background-color: rgb(238, 232, 218);
-    width: 250px;
-    height: 100vh;
-    transition: left 0.3s ease;
-    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: rgb(238, 232, 218);
+  width: 250px;
+  height: 100vh;
+  transition: left 0.3s ease;
+  box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 /* Cuando el menú está abierto */
 .menu.open {
-    display: block;
-    left: 0;
+  display: block;
+  left: 0;
 }
 
 .close-btn:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .menu-btn:focus,
 .close-btn:focus,
 .language-btn:focus {
-    outline: 2px solid #fff;
-    outline-offset: 2px;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 /* Estilo para los elementos del menú */
 .menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Estilo de los items del menú */
-.menu ul li {
-    padding: 20px 20px;
+.menu ul li u {
+  padding: 10px 10px;
 }
+
+
 
 /* Estilo para los enlaces del menú */
 .menu ul li a {
-    color: rgb(14, 1, 1);
-    text-decoration: none;
-    display: block;
+  color: rgb(14, 1, 1);
+  text-decoration: none;
+  display: block;
+  line-height: 1.6;
 }
 
 /* Efecto hover en los enlaces */
 .menu ul li a:hover {
-    background-color: rgba(216, 19, 19, 0.127);
-    color: rgb(24, 2, 2);
-    border-radius: 5px;
+  background-color: rgba(216, 19, 19, 0.127);
+  color: rgb(24, 2, 2);
+  border-radius: 5px;
+}
+
+u {
+  font-family: 'Futura';
+  text-decoration: none;
+ padding: 3px 3px;
+  line-height: 1.2;
+  font-size: 17px;
+
 }
 
 
 
 /* Estilo del título */
 h1 {
-    font-size: 30px;
-    font-weight: 800;
-    z-index: 40;
-    color: rgba(249, 247, 247, 0.989);
-    text-align: center;
-    font-family: 'Glomerolus';
+  font-size: 30px;
+  font-weight: 800;
+  z-index: 40;
+  color: rgba(249, 247, 247, 0.989);
+  text-align: center;
+  font-family: 'Glomerolus';
 }
 
 .title {
-    font-family: 'Glomerolus';
-    font-size: 40px;
-    color: black;
-    margin-right: 3rem;
+  font-family: 'Glomerolus';
+  font-size: 40px;
+  color: black;
+  margin-right: 3rem;
 }
 
 .Resto {
-    text-align: center;
-    padding-top: 20px;
+  text-align: center;
+  padding-top: 20px;
 
 }
 
 .container-name {
-    background: transparent;
-    color: black;
-    font-size: 18px;
-    font-family: 'Futura';
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
+  background: transparent;
+  color: black;
+  font-size: 18px;
+  font-family: 'Futura';
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
 
 }
 
 .icon-rest {
-    width: 50px;
-    margin: 0;
-    margin-right: 5px;
-    cursor: pointer;
+  width: 50px;
+  margin: 0;
+  margin-right: 5px;
+  cursor: pointer;
 
 }
 
 
 .linea {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
 }
 
@@ -698,182 +729,219 @@ h1 {
 
 /* Estilo de los iconos sociales */
 .social-icons2 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .icon-2 {
-    width: 35px;
-    margin-left: 10px;
-    cursor: pointer;
+  width: 35px;
+  margin-left: 10px;
+  cursor: pointer;
 
 }
 
 .icon-3 {
-    width: 35px;
-    margin-left: 10px;
-    cursor: pointer;
+  width: 35px;
+  margin-left: 10px;
+  cursor: pointer;
 
-    filter: invert(0%) sepia(5%) saturate(7397%) hue-rotate(340deg) brightness(111%) contrast(99%);
+  filter: invert(0%) sepia(5%) saturate(7397%) hue-rotate(340deg) brightness(111%) contrast(99%);
 }
 
 .icon-2:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .icon-3:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 img,
 .icon-rest,
 .icon-2,
 .icon-3 {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Estilo del selector de idioma */
 .language-select {
-    position: relative;
-    margin-left: 15px;
+  position: relative;
+  margin-left: 15px;
 }
 
 /* Botón de idioma */
 .language-btn {
-    background: transparent;
-    color: black;
-    text-decoration: none;
-    display: block;
-    padding: 5px 5px 0;
-    font-size: 18px;
-    border: 2px black solid;
-    cursor: pointer;
-    border-radius: 5px;
-    align-items: center;
-    padding-right: 5px;
-    margin-right: 7px;
-    margin-bottom: 5px;
+  background: transparent;
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 5px 5px 0;
+  font-size: 18px;
+  border: 2px black solid;
+  cursor: pointer;
+  border-radius: 5px;
+  align-items: center;
+  padding-right: 5px;
+  margin-right: 7px;
+  margin-bottom: 5px;
 
 
 }
 
 .language-btn:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 /* Menú desplegable de idiomas */
 .language-menu {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    background-color: black;
-    width: 150px;
-    color: whitesmoke;
-    box-shadow: 2px 0px 8px rgba(174, 164, 164, 0.2);
-    z-index: 100;
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: black;
+  width: 150px;
+  color: whitesmoke;
+  box-shadow: 2px 0px 8px rgba(174, 164, 164, 0.2);
+  z-index: 100;
 }
 
 /* Mostrar el menú de idiomas cuando se activa */
 .language-menu.open {
-    display: block;
+  display: block;
 }
 
 /* Estilo para los enlaces de idiomas */
 .language-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 
 }
 
 .language-menu ul li {
-    padding: 10px;
+  padding: 10px;
 
 }
 
 .language-menu ul li a {
-    color: whitesmoke;
-    text-decoration: none;
-    display: block;
+  color: whitesmoke;
+  text-decoration: none;
+  display: block;
 }
 
 /* Efecto hover en los enlaces del selector de idioma */
 .language-menu ul li a:hover {
-    background-color: rgba(216, 19, 19, 0.127);
-    color: rgb(29, 3, 3);
+  background-color: rgba(216, 19, 19, 0.127);
+  color: rgb(29, 3, 3);
 }
 
 /* Flexbox para organizar los elementos dentro de .con--2 */
 .con--2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Estilo para el botón de cierre del menú */
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    color: black;
-    font-size: 30px;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: black;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
 }
 
 .close-btn:hover {
-    background-color: rgba()
+  background-color: rgba()
 }
+
 @media (max-width: 420px) {
+  .menu-btn {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .menu-btn,
-    .language-btn {
-        font-size: 12px;
-        width: 28px;
-        height: 28px;
-    }
+  }
 
-    .social-icons {
-        font-size: 12px;
-    }
+  .menu-btn .icon {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    margin-left: 7px;
+    margin-top: 2px;
+    display: block;
+    filter: invert(0%) sepia(1%) saturate(4287%) hue-rotate(327deg) brightness(97%) contrast(99%);
+  }
 
-    .language-btn {
-        padding-right: 2px;
-    }
+  .menu-btn,
+  .language-btn {
+    font-size: 12px;
+    width: 28px;
+    height: 28px;
+  }
 
-    .icon-rest {
-        font-size: 12px;
-        width: 28px;
-        height: 28px;
-        margin-bottom: -4px;
-    }
+  .social-icons {
+    font-size: 12px;
+  }
 
-    .title {
-        font-size: 15px;
-        width: 28px;
-        height: 28px;
-        width: 100%;
-    }
+  .language-btn {
+    padding-right: 2px;
+  }
+
+  .icon-rest {
+    font-size: 12px;
+    width: 28px;
+    height: 28px;
+    margin-bottom: -4px;
+  }
+
+  .title {
+    font-size: 15px;
+    width: 28px;
+    height: 28px;
+    width: 100%;
+  }
+
+  .menu ul li u {
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  u {
+    font-size: 25px;
+  }
+
+
+  .container-name {
+    font-size: 25px;
+  }
 }
+
 @media (max-width: 768px) {
-    .menu {
-        width: 100vw;
-        height: 100vh;
-        left: -100vw;
-        z-index: 2000; 
-    }
+  .menu {
+    width: 100vw;
+    height: 100vh;
+    left: -100vw;
+    z-index: 2000;
+  }
 
-    .menu.open {
-        left: 0;
-    }
+  .menu.open {
+    left: 0;
+  }
 
- 
-    .back {
-        z-index: 500; 
-    }
+
+  .back {
+    z-index: 500;
+  }
 }

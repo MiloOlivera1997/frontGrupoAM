@@ -627,8 +627,8 @@ nav {
 }
 
 /* Estilo de los items del menú */
-.menu ul li {
-    padding: 20px 20px;
+.menu ul li u{
+    padding: 10px ;
 }
 
 /* Estilo para los enlaces del menú */
@@ -636,6 +636,7 @@ nav {
     color: rgb(14, 1, 1);
     text-decoration: none;
     display: block;
+    line-height: 1.6;
 }
 
 /* Efecto hover en los enlaces */
@@ -645,7 +646,11 @@ nav {
     border-radius: 5px;
 }
 
-
+u {
+     font-family: 'Futura';
+     text-decoration: none;
+     padding: 5px 5px;
+ }
 
 /* Estilo del título */
 h1 {
@@ -673,7 +678,7 @@ h1 {
     background: transparent;
     color: black;
     font-size: 18px;
-    font-family: 'Futura';
+    font-family: 'Glomerolus';
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -836,11 +841,25 @@ img,
 
 @media (max-width: 420px) {
 
-    .menu-btn{
-        font-size: 12px;
-        width: 28px;
-        height: 28px;
-        
+  .menu-btn {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+         margin-top: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .menu-btn .icon {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        margin-left: 7px;
+        margin-bottom: 2px;
+        display: block;
+        filter: invert(97%) sepia(99%) saturate(261%) hue-rotate(299deg) brightness(109%) contrast(97%);
     }
 
     .language-btn {
@@ -871,7 +890,21 @@ img,
         height: 28px;
         width: 100%;
         margin-bottom: 10px;
-    }}
+    }
+        .menu ul li u {
+         padding: 5px 5px;
+         text-decoration: none;
+           font-size: 25px;
+     }
+u{
+    font-size: 25px;
+}
+    
+
+     .container-name {
+         font-size: 25px;
+     }
+}
 @media (max-width: 768px) {
     .menu {
         width: 100vw;
