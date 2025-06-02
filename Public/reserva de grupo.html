@@ -780,6 +780,46 @@
 }); 
 
 
+fetch("https://backgrupoam.onrender.com/reservar", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(reservaData)
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log("Reserva enviada:", data);
+
+    const mensaje = document.getElementById("mensaje-reserva");
+
+    if (data.message === "Reserva realizada correctamente") {
+      mostrarToast("¡Reserva realizada correctamente!", "success");
+      document.getElementById("tuFormulario").reset();
+      inputMenuTipo.value = "";
+    } else {
+      mostrarToast("Error: " + (data.error || "No se pudo procesar la reserva."), "error");
+    }
+  })
+  .catch(error => {
+    console.error("Error al enviar la reserva:", error);
+    const mensaje = document.getElementById("mensaje-reserva");
+    mensaje.style.color = "red";
+    mostrarToast("Error al conectar con el servidor.", "error");
+  });
+
+
+function mostrarToast(mensaje, tipo = "success") {
+  const toast = document.getElementById("toast");
+  toast.textContent = mensaje;
+  toast.className = `toast show ${tipo}`;
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+    toast.classList.add("hidden");
+  }, 4000);
+}
+
   </script>
 
 
