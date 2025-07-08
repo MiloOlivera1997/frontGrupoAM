@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receta y Cocina</title>
+  <link rel="stylesheet" href="css/receta.css">
+  <link rel="icon" href="img/Asset 1.png" type="image/png">
+  <!--Script,style y escript final preloader-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    #pageloader-overlay {
+      opacity: 1;
+      top: 0;
+      left: 0;
+      position: fixed;
+      background-color: rgba(255, 255, 255, 1);
+      height: 100%;
+      width: 100%;
+      z-index: 9998;
+      transition: opacity 0.2s linear;
+
+    }
+
+    #pageloader-overlay.hidden {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      z-index: -10000;
+    }
+
+    .loader-wrapper-outer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .loader-hide {
+      animation: fadeOutScale 1s ease forwards;
+    }
+
+    #loader-gif {
+      width: 200px;
+      height: auto;
+    }
+
+    @keyframes fadeOutScale {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+    }
+
+    .contenido {
+      padding: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="recetac">
+  <div id="pageloader-overlay">
+    <div class="loader-wrapper-outer" style="background-color: rgb(238, 232, 218);">
+      <img id="loader-gif" src="img/IMG-4269G-unscreen.gif" alt="Cargando..." width="100"
+        style="background-color: rgb(238, 232, 218);">
+    </div>
+  </div>
+ <nav class="nav">
+            <section class="con--2">
+                <!-- Menu -->
+                <div class="contenedor">
+                    <button class="menu-btn" id="menu-toggle">
+                        <img class="icon" src="iconos/menu.svg" alt="Menu" id="menu-icon" data-section="Menu principal" data-value="menu">Menú
+                    </button>
+                    <div class="menu" id="menu">
+                       
+                        <button class="close-btn" id="close-menu">X</button>
+                        <ul>
+            <h3 class="Resto" id="restaurants-title" data-section="Menu principal" data-value="restaurants"
+              style="font-family: 'Glomerolus'; margin-bottom: 10px;"><u >RESTAURANTES</u></h3>
+            <li>
+              <div><a href="esquinapadilla.html" id="item-1" class="item-name">
+
+                  <div class="container-name" style="font-family: 'Glomerolus';">
+                    ESQUINA PADILLA
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li><a href="granada.html" id="item-2">
+                <div class="container-name" style="font-family: 'Glomerolus';">ESQUINA GRANADA</div>
+              </a></li>
+            <li><a href="creando.html" id="item-3">
+                <div class="container-name" style="font-family: 'Glomerolus';">ESQUINA PLAZA CAMAS</div>
+              </a></li>
+               <hr style="width: 80%; margin-left: 20px; margin-bottom: 10px; margin-top: 10px;">
+            <li><a href="creando.html" id="item-4" data-section="Menu principal" data-value="item1">
+                <h3><u>RESERVA DE GRUPOS</u></h3>
+              </a></li>
+            <li><a href="recetaycocina.html" id="item-5" data-section="Menu principal" data-value="item2">
+                <h3><u>RECETA & COCINA</u></h3>
+              </a></li>
+            <li><a href="creando.html" id="item-6" data-section="Menu principal" data-value="item3">
+                <h3><u>FAMILIA</u></h3>
+              </a></li>
+            <li><a href="creando.html" id="item-7" data-section="Menu principal" data-value="item4">
+                <h3><u>HISTORIA & LEGADO</u></h3>
+              </a></li>
+            <li><a href="trabaja.html" id="item-8" data-section="Menu principal" data-value="item5">
+                <h3><u>TRABAJA CON NOSOTROS</u></h3>
+              </a></li>
+          </ul>
+                    </div>
+                </div>
+                <!-- Titulo -->
+              <a href="index.html" style="text-decoration: none;">
+    <h1 class="title" id="title" style="color: black;">
+        <img src="img/Asset 1.png" class="icon-rest"> GRUPO AM
+    </h1>
+</a>
+
+                <div class="social-icons2">
+                    <a href="https://www.instagram.com/grupoamsl/" target="_blank"> <img class="icon-2"
+                            src="iconos/instagram.svg" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@grupoamsl?_t=ZN-8vS4LksSJqo&_r=1" target="_blank"><img
+                            class="icon-3" src="iconos/tiktok.svg" alt="TikTok"></a>
+
+
+                    <!-- Menú de selección de idioma -->
+                    <div class="language-select">
+                        <button class="language-btn" id="language-toggle">ES</button>
+                        <div class="language-menu" id="language-menu">
+                            <ul>
+                                <li class="opcion"><a href="#" id="language-es" data-language="es"><span>ES</span></a></li>
+                                <li class="opcion"><a href="#" id="language-en" data-language="en"><span>EN</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <hr class="hr-">
+        </nav>
+
+  <h1 class="title-rc" data-section="Recetas" data-value="RECETA & COCINA">RECETA & COCINA</h1>
+  <hr style="background: rgb(3, 83, 109); height: 3px; width: 50%;">
+
+
+  <div class="containerpaella">
+    <div>
+      <div class="hs"><strong  data-section="Recetas" data-value="GAZPACHO">GAZPACHO</strong>
+        <p class="Ingrediestes" data-section="Recetas" data-value="Ingredientes">Ingredientes:</p >
+        <li data-section="Recetas" data-value="g1">2 kg de tomate maduro</li>
+        <li data-section="Recetas" data-value="g2">10 g de ajo (2-3 dientes)</li>
+        <li data-section="Recetas" data-value="g3">120 g de pimiento rojo </li>
+        <li data-section="Recetas" data-value="g4">120 g de pimiento verde</li>
+        <li data-section="Recetas" data-value="g5">50 ml de vinagre de vino</li>
+        <li data-section="Recetas" data-value="g6">10 g de sal</li>
+        <li data-section="Recetas" data-value="g7">260 ml de aceite de oliva virgen extra</li>
+        <li data-section="Recetas" data-value="g8">300 ml de agua fría</li>
+        <p class="Ingrediestes" data-section="Recetas" data-value="Procedimiento">Procedimiento:</p
+          >
+        <ol>
+          <li data-section="Recetas" data-value="g9">Poné en el vaso los tomates, pimientos y ajo.</li>
+          <li data-section="Recetas" data-value="g10">Triturá 30 seg / vel 5.</li>
+          <li data-section="Recetas" data-value="g11">Agregá el vinagre, el aceite, la sal y el agua.</li>
+          <li data-section="Recetas" data-value="g12">Programá 3 min / vel 10.</li>
+          <li data-section="Recetas" data-value="g13" >Llevá a la heladera al menos 2 horas antes de servir. Mejor bien frío.</li>
+
+        </ol>
+
+
+      </div>
+    </div>
+
+    <div class="imghs1"> <img src="img/gazpacho.jpg" class="imagenc" alt="imange1">
+
+    </div>
+  </div>
+
+  <div class="containerpaella">
+    <div class="imghs1"> <img src="img/IMG_0065.JPG" class="imagencpaella" alt="imange2">
+
+    </div>
+    <div class="hs"><div class="move-text"><strong class="text-mo">PAELLA</strong>
+      <div class="text-mo">
+        <p class="Ingrediestes" data-section="Recetas" data-value="Ingredientes">Ingredientes:</p>
+        <li data-section="Recetas" data-value="p1">30gr Sofrito</li>
+        <li data-section="Recetas" data-value="p2">140gr cucharón Arroz </li>
+        <li data-section="Recetas" data-value="p3">460gr Caldo</li>
+        <li data-section="Recetas" data-value="p4">200gr Fondo Vegetal/Marisco/Pollo </li>
+
+        <p class="Ingrediestes" data-section="Recetas" data-value="Procedimiento">Procedimiento:</p>
+        <ol>
+          <li data-section="Recetas" data-value="p5">Precalentar el horno a 180 °C.</li>
+          <li data-section="Recetas" data-value="p6">Rehogar el sofrito durante unos minutos.</li>
+          <li data-section="Recetas" data-value="p7">Añadir el arroz y saltear brevemente para que se impregne bien del sofrito.</li>
+          <li data-section="Recetas" data-value="p8">Verter el caldo caliente y el fondo (vegetal, pollo o marisco), mezclando bien.</li>
+          <li data-section="Recetas" data-value="p9"> Llevar al horno y hornear durante 20 minutos a 180 °C, sin remover.</li>
+          <li data-section="Recetas" data-value="p10">Retirar, dejar reposar unos minutos antes de servir.</li>
+        </ol>
+        <p class="tip" data-section="Recetas" data-value="p11">Tip del chef : Este método de horno asegura un arroz suelto y parejo, ideal para
+          preparaciones en volumen.</p>
+      </div></div>
+    </div>
+  </div>
+
+
+  <div class="containerpaella">
+    <div class="hs"><strong data-section="Recetas" data-value="GAMBAS AL PILPIL">GAMBAS AL PILPIL</strong>
+      <p class="Ingrediestes" data-section="Recetas" data-value="Ingredientes">Ingredientes:</p>
+      <li data-section="Recetas" data-value= "gam1">200gr Aceite de oliva</li>
+      <li data-section="Recetas" data-value= "gam2">30gr Vino blanco</li>
+      <li data-section="Recetas" data-value= "gam3">85gr/5u Gambas</li>
+      <li data-section="Recetas" data-value= "gam4"> 1gr/4u Guimdillas secas</li>
+      <li data-section="Recetas" data-value= "gam5">1gr Ajo</li>
+      <li data-section="Recetas" data-value= "gam6">10gr Pimenton Dulce</li>
+      <li data-section="Recetas" data-value= "gam7">0,5gr Perejil fresco</li>
+      <p class="Ingrediestes" data-section="Recetas" data-value="Procedimiento">Procedimiento:</p>
+      <ol>
+        <li data-section="Recetas" data-value= "gam8">Picá el ajo en láminas finas.</li>
+        <li data-section="Recetas" data-value= "gam9">Cortá las guindillas si querés que piquen más (opcional).</li>
+        <li data-section="Recetas" data-value= "gam10">Picá el perejil finamente.</li>
+        <li data-section="Recetas" data-value= "gam11">Calentar el aceite</li>
+        <li data-section="Recetas" data-value= "gam12">En una cazuelita, poné el aceite de oliva a fuego medio-alto.</li>
+        <li data-section="Recetas" data-value= "gam13">Agregá las láminas de ajo y las guindillas. Cociná hasta que el ajo empiece a dorarse ligeramente, sin que
+          se queme.</li>
+        <li data-section="Recetas" data-value= "gam14">Agregá las gambas.</li>
+        <li data-section="Recetas" data-value= "gam15">Añadí el vino blanco.</li>
+        <li data-section="Recetas" data-value= "gam16">Agregá el pimentón dulce. Remové rápido para que no se queme.</li>
+        <li data-section="Recetas" data-value= "gam17">Cociná por 1–2 minutos de cada lado hasta que estén rosadas y bien cocidas.</li>
+        <li data-section="Recetas" data-value= "gam18">Espolvoreá el perejil por encima justo antes de servir.</li>
+      </ol>
+      <p class="tip" data-section="Recetas" data-value= "gam19">Tip extra : Acompañalo con un buen pan crujiente para mojar en ese aceite lleno de
+        sabor. Vas a querer limpiar la cazuela.</p>
+
+    </div>
+
+    <div class="imghs1"> <img src="img/IMG_0064.JPG" class="imagegam" alt="imange1">
+
+    </div>
+  </div>
+
+  <div class="containerpaella">
+    <div class="imghs1"> <img src="img/sangrias.jpg" class="imagencpaella" style="background-image: 
+   linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));" alt="imange2">
+
+    </div>
+    <div class="hs">
+      <div class="move-text"><strong class="text-mo" data-section="Recetas" data-value= "SANGRÍA">Sangria</strong>
+
+
+        <p class="Ingrediestes" data-section="Recetas" data-value= "s1">Crear un almibar:</p>
+        <li data-section="Recetas" data-value= "s2">1 kg de azúcar blanca</li>
+        <li data-section="Recetas" data-value= "s3">1 L de agua</li>
+        <li data-section="Recetas" data-value= "s4">2 ramas de canela</li>
+
+        <p class="Ingrediestes" data-section="Recetas" data-value= "s5">Después de enfriar, agregar:</p>
+        <li data-section="Recetas" data-value= "s6">500 ml de Triple sec</li>
+        <li data-section="Recetas" data-value= "s7">500 ml de brandy</li>
+        <li data-section="Recetas" data-value= "s8">500 ml de vermut rojo</li>
+        <li data-section="Recetas" data-value= "s9">500 ml de Licor 56 (o cualquier licor dulce)</li>
+        <li data-section="Recetas" data-value= "s10">500 ml de jugo de naranja</li>
+
+        <p class="Ingrediestes" data-section="Recetas" data-value= "s11">Para usar con Tinto de Verano:</p>
+        <li data-section="Recetas" data-value= "s12">75 ml de premix</li>
+        <li data-section="Recetas" data-value= "s13">100 ml de soda</li>
+        <li data-section="Recetas" data-value= "s14">Mucho hielo </li>
+        <li data-section="Recetas" data-value= "s15">Completar con tinto de verano</li>
+
+        <p class="tip" data-section="Recetas" data-value= "s16">Tip extra : Si usas vino tinto (elige uno ligero) cambia soda por fanta naranja o limon.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  </div>
+  <div class="containerpaella">
+    <div class="hs"><strong data-section="Recetas" data-value= "CREMA CATALANA">CREMA CATALANA</strong>
+      <p class="Ingrediestes" data-section="Recetas" data-value="Ingredientes">Ingredientes:</p>
+      <li data-section="Recetas" data-value= "c2">10u Yema de huevo</li>
+      <li data-section="Recetas" data-value= "c3">1000cc Leche</li>
+      <li data-section="Recetas" data-value= "c4">180gr Azúcar</li>
+      <li data-section="Recetas" data-value= "c5">50gr Maicena</li>
+      <li data-section="Recetas" data-value= "c6">5gr Canela molida</li>
+      <li data-section="Recetas" data-value= "c7">5gr Esencia de vainilla</li>
+
+      <p class="Ingrediestes" data-section="Recetas" data-value="Procedimiento">Procedimiento:</p>
+      <ol>
+
+        <li data-section="Recetas" data-value= "c8">Batir todos los ingredientes por 20 segundos a velocidad 5 en Thermomix sin mariposa.</li>
+        <li data-section="Recetas" data-value= "c9">Luego colocar la mariposa y cocinar 13 minutos velocidad 2.</li>
+        <li data-section="Recetas" data-value= "c10">Agregá el vinagre, el aceite, la sal y el agua.</li>
+        <li data-section="Recetas" data-value= "c11">Para finalizar colocarla en tazo y dejarla enfriar.</li>
+
+
+      </ol>
+
+
+    </div>
+
+    <div class="imghs1"> <img src="img/catalas2.jpg" class="imagegam" alt="imange1">
+
+    </div>
+  </div>
+  <footer class="footer-leg"><img src="img/Asset 1.png" class="footer-flor-leg"></footer>
+  <footer class="footer-j" >
+    <div class="foot">By Grupo AM</div>
+    <div class="foot">Todos los derechos reservados.</div>
+    <div class="contacto">MANTENTE EN CONTACTO</div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/grupoamsl/" target="_blank"> <img class="icon-22"
+          src="iconos/logotipo-de-instagram.png" alt="Instagram"></a>
+      <a href="https://www.tiktok.com/@grupoamsl?_t=ZN-8vS4LksSJqo&_r=1" target="_blank"><img class="icon-33"
+          src="iconos/tiktok.svg" alt="TikTok"></a>
+    </div>
+    <div class="footer-legal">
+      <div><a href="avisoLegal.html" class="legal">Aviso Legal</a></div>
+<div> <a href="quienessomos.html" class="legal">¿Quiénes somos?</a></div>
+      <div><a href="trabaja.html" class="legal">Trabaja con nosotros</a></div>
+    </div>
+  </footer>
+   <script src="js/familia.js"></script>
+ 
+  <script>
+    $(document).ready(function () {
+      const $overlay = $('#pageloader-overlay');
+      const $gif = $('#loader-gif');
+
+      setTimeout(function () {
+        $gif.addClass('loader-hide');
+
+        setTimeout(function () {
+          $overlay.addClass('hidden');
+        }, 1000);
+      }, 2000);
+    });
+  </script>
+</body>
+
+</html>

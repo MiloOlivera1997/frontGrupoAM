@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de Grupo</title>
+  <link rel="icon" href="img/Asset 1.png" type="image/png">
+  <link rel="stylesheet" href="css/resrva.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    #pageloader-overlay {
+      opacity: 1;
+      top: 0;
+      left: 0;
+      position: fixed;
+      background-color: rgba(255, 255, 255, 1);
+      height: 100%;
+      width: 100%;
+      z-index: 9998;
+      transition: opacity 0.2s linear;
+
+    }
+
+    #pageloader-overlay.hidden {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      z-index: -10000;
+    }
+
+    .loader-wrapper-outer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .loader-hide {
+      animation: fadeOutScale 1s ease forwards;
+    }
+
+    #loader-gif {
+      width: 200px;
+      height: auto;
+    }
+
+    @keyframes fadeOutScale {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+    }
+
+    .contenido {
+      padding: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="pageloader-overlay">
+    <div class="loader-wrapper-outer" style="background-color: rgb(238, 232, 218);">
+      <img id="loader-gif" src="img/IMG-4269G-unscreen.gif" alt="Cargando..." width="100"
+        style="background-color: rgb(238, 232, 218);">
+    </div>
+  </div>
+   <nav class="nav">
+            <section class="con--2">
+                <!-- Menu -->
+                <div class="contenedor">
+                    <button class="menu-btn" id="menu-toggle">
+                        <img class="icon" src="iconos/menu.svg" alt="Menu" id="menu-icon" data-section="Menu principal" data-value="menu">Menú
+                    </button>
+                    <div class="menu" id="menu">
+                       
+                        <button class="close-btn" id="close-menu">X</button>
+                        <ul>
+            <h3 class="Resto" id="restaurants-title" data-section="Menu principal" data-value="restaurants"
+              style="font-family: 'Glomerolus'; margin-bottom: 10px;"><u >RESTAURANTES</u></h3>
+            <li>
+              <div><a href="esquinapadilla.html" id="item-1" class="item-name">
+
+                  <div class="container-name" style="font-family: 'Glomerolus';">
+                    ESQUINA PADILLA
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li><a href="granada.html" id="item-2">
+                <div class="container-name" style="font-family: 'Glomerolus';">ESQUINA GRANADA</div>
+              </a></li>
+            <li><a href="creando.html" id="item-3">
+                <div class="container-name" style="font-family: 'Glomerolus';">ESQUINA PLAZA CAMAS</div>
+              </a></li>
+               <hr style="width: 80%; margin-left: 20px; margin-bottom: 10px; margin-top: 10px;">
+            <li><a href="creando.html" id="item-4" data-section="Menu principal" data-value="item1">
+                <h3><u>RESERVA DE GRUPOS</u></h3>
+              </a></li>
+            <li><a href="recetaycocina.html" id="item-5" data-section="Menu principal" data-value="item2">
+                <h3><u>RECETA & COCINA</u></h3>
+              </a></li>
+            <li><a href="creando.html" id="item-6" data-section="Menu principal" data-value="item3">
+                <h3><u>FAMILIA</u></h3>
+              </a></li>
+            <li><a href="creando.html" id="item-7" data-section="Menu principal" data-value="item4">
+                <h3><u>HISTORIA & LEGADO</u></h3>
+              </a></li>
+            <li><a href="trabaja.html" id="item-8" data-section="Menu principal" data-value="item5">
+                <h3><u>TRABAJA CON NOSOTROS</u></h3>
+              </a></li>
+          </ul>
+                    </div>
+                </div>
+                <!-- Titulo -->
+             <a href="index.html" style="text-decoration: none;">
+    <h1 class="title" id="title" >
+        <img src="img/Asset 1.png" class="icon-rest"> GRUPO AM
+    </h1>
+</a>
+
+                <div class="social-icons2">
+                    <a href="https://www.instagram.com/grupoamsl/" target="_blank"> <img class="icon-2"
+                            src="iconos/instagram.svg" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@grupoamsl?_t=ZN-8vS4LksSJqo&_r=1" target="_blank"><img
+                            class="icon-3" src="iconos/tiktok.svg" alt="TikTok"></a>
+
+
+                    <!-- Menú de selección de idioma -->
+                    <div class="language-select">
+                        <button class="language-btn" id="language-toggle">ES</button>
+                        <div class="language-menu" id="language-menu">
+                            <ul>
+                                <li class="opcion"><a href="#" id="language-es" data-language="es"><span>ES</span></a></li>
+                                <li class="opcion"><a href="#" id="language-en" data-language="en"><span>EN</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <hr>
+        </nav>
+  <section class="background">
+    <h1 data-section="Reserva" data-value="RESERVA_DE_GRUPO">RESERVA DE GRUPO</h1>
+
+    <hr style=" width: 50%; margin-left: 25%; background-color:  rgb(163, 51, 59); height: 5px; border: 1px rgb(163, 51, 59) solid ;">
+
+
+  </section>
+
+
+
+  <div class="reservag">
+
+
+
+    <div class="meu-elec-25" id="menu-25">
+
+      <div class="meu-item">Menú 25€</div>
+      <p data-section="Reserva" data-value="entrante"> <strong>Entrante</strong></p>
+
+
+
+
+      <select class="menuselec-food" name="entrante[]">
+        <option value="Selecciona tu entrante" data-section="Reserva" data-value="Selecciona tu entrante">Selecciona tu
+          entrante</option>
+        <option value="ENSALADILLA RUSA" data-section="Reserva" data-value="ENSALADILLA RUSA">ENSALADILLA RUSA </option>
+        <option value="CROQUETAS" data-section="Reserva" data-value="CROQUETAS">CROQUETAS</option>
+        <option value="CHIPIRONES A LA PLANCHA" data-section="Reserva" data-value="CHIPIRONES A LA PLANCHA">CHIPIRONES A
+          LA PLANCHA</option>
+        <option value="PATA DE JAMÓN AL HORNO " data-section="Reserva" data-value="PATA DE JAMÓN AL HORNO">PATA DE JAMÓN
+          AL HORNO
+        </option>
+        <option value="EMPANADILLA DE CARNE" data-section="Reserva" data-value="EMPANADILLA DE CARNE">EMPANADILLA DE
+          CARNE</option>
+      </select>
+
+
+
+      <select class="menuselec-food" name="entrante[]">
+        <option value="Selecciona tu entrante" data-section="Reserva" data-value="Selecciona tu entrante">Selecciona tu
+          entrante</option>
+        <option value="ENSALADILLA RUSA" data-section="Reserva" data-value="ENSALADILLA RUSA">ENSALADILLA RUSA </option>
+        <option value="CROQUETAS" data-section="Reserva" data-value="CROQUETAS">CROQUETAS</option>
+        <option value="CHIPIRONES A LA PLANCHA" data-section="Reserva" data-value="CHIPIRONES A LA PLANCHA">CHIPIRONES A
+          LA PLANCHA</option>
+        <option value="PATA DE JAMÓN AL HORNO " data-section="Reserva" data-value="PATA DE JAMÓN AL HORNO">PATA DE JAMÓN
+          AL HORNO
+        </option>
+        <option value="EMPANADILLA DE CARNE" data-section="Reserva" data-value="EMPANADILLA DE CARNE">EMPANADILLA DE
+          CARNE</option>
+      </select>
+
+      <select class="menuselec-food" name="entrante[]">
+        <option value="Selecciona tu entrante" data-section="Reserva" data-value="Selecciona tu entrante">Selecciona tu
+          entrante</option>
+        <option value="ENSALADILLA RUSA" data-section="Reserva" data-value="ENSALADILLA RUSA">ENSALADILLA RUSA </option>
+        <option value="CROQUETAS" data-section="Reserva" data-value="CROQUETAS">CROQUETAS</option>
+        <option value="CHIPIRONES A LA PLANCHA" data-section="Reserva" data-value="CHIPIRONES A LA PLANCHA">CHIPIRONES A
+          LA PLANCHA</option>
+        <option value="PATA DE JAMÓN AL HORNO " data-section="Reserva" data-value="PATA DE JAMÓN AL HORNO">PATA DE JAMÓN
+          AL HORNO
+        </option>
+        <option value="EMPANADILLA DE CARNE" data-section="Reserva" data-value="EMPANADILLA DE CARNE">EMPANADILLA DE
+          CARNE</option>
+      </select>
+
+
+      <p data-section="Reserva" data-value="principal"><strong> Principal</strong></p>
+      <select class="menuselec-food" name="principal[]">
+        <option value="Selecciona tu principal" data-section="Reserva" data-value="Selecciona tu principal">Selecciona
+          tu principal</option>
+        <option value="CHIPIRONES A LA PLANCHA" data-section="Reserva" data-value="CHIPIRONES A LA PLANCHA">CHIPIRONES A
+          LA PLANCHA</option>
+
+        <option value="HAMBURGUESA PADILLA" data-section="Reserva" data-value="HAMBURGUESA PADILLA">HAMBURGUESA PADILLA
+        </option>
+        <option value="ENSALADA PADILLA" data-section="Reserva" data-value="ENSALADA PADILLA">ENSALADA PADILLA</option>
+        <option value="MILANESA A CABALLO" data-section="Reserva" data-value="MILANESA A CABALLO">MILANESA A CABALLO
+        </option>
+
+      </select>
+
+      <select class="menuselec-food" name="principal[]">
+        <option value="Selecciona tu principal" data-section="Reserva" data-value="Selecciona tu principal">Selecciona
+          tu principal</option>
+        <option value="CHIPIRONES A LA PLANCHA" data-section="Reserva" data-value="CHIPIRONES A LA PLANCHA">CHIPIRONES A
+          LA PLANCHA</option>
+
+        <option value="HAMBURGUESA PADILLA" data-section="Reserva" data-value="HAMBURGUESA PADILLA">HAMBURGUESA PADILLA
+        </option>
+        <option value="ENSALADA PADILLA" data-section="Reserva" data-value="ENSALADA PADILLA">ENSALADA PADILLA</option>
+        <option value="MILANESA A CABALLO" data-section="Reserva" data-value="MILANESA A CABALLO">MILANESA A CABALLO
+        </option>
+
+      </select>
+
+      <select class="menuselec-food" name="principal[]">
+        <option value="Selecciona tu principal" data-section="Reserva" data-value="Selecciona tu principal">Selecciona
+          tu principal</option>
+        <option value="CHIPIRONES A LA PLANCHA" data-section="Reserva" data-value="CHIPIRONES A LA PLANCHA">CHIPIRONES A
+          LA PLANCHA</option>
+
+        <option value="HAMBURGUESA PADILLA" data-section="Reserva" data-value="HAMBURGUESA PADILLA">HAMBURGUESA PADILLA
+        </option>
+        <option value="ENSALADA PADILLA" data-section="Reserva" data-value="ENSALADA PADILLA">ENSALADA PADILLA</option>
+        <option value="MILANESA A CABALLO" data-section="Reserva" data-value="MILANESA A CABALLO">MILANESA A CABALLO
+        </option>
+
+      </select>
+
+
+      <p data-section="Reserva" data-value="postre"><strong>Postre</strong></p>
+      <select class="menuselec-food" name="postre[]">
+        <option value="Selecciona tu postre " data-section="Reserva" data-value="Selecciona tu postre">Selecciona tu
+          postre</option>
+        <option value="CREMA CATALANA" data-section="Reserva" data-value="CREMA CATALANA">CREMA CATALANA</option>
+        <option value="TARTA DE QUESO" data-section="Reserva" data-value="TARTA DE QUESO">TARTA DE QUESO </option>
+        <option value="CAFÉ O INFUSIÓN" data-section="Reserva" data-value="CAFÉ O INFUSIÓN">CAFÉ O INFUSIÓN</option>
+
+
+      </select>
+
+      <select class="menuselec-food" name="postre[]">
+        <option value="Selecciona tu postre " data-section="Reserva" data-value="Selecciona tu postre">Selecciona tu
+          postre</option>
+        <option value="CREMA CATALANA" data-section="Reserva" data-value="CREMA CATALANA">CREMA CATALANA</option>
+        <option value="TARTA DE QUESO" data-section="Reserva" data-value="TARTA DE QUESO">TARTA DE QUESO </option>
+        <option value="CAFÉ O INFUSIÓN" data-section="Reserva" data-value="CAFÉ O INFUSIÓN">CAFÉ O INFUSIÓN</option>
+
+
+      </select>
+
+      <select class="menuselec-food" name="postre[]">
+        <option value="Selecciona tu postre " data-section="Reserva" data-value="Selecciona tu postre">Selecciona tu
+          postre</option>
+        <option value="CREMA CATALANA" data-section="Reserva" data-value="CREMA CATALANA">CREMA CATALANA</option>
+        <option value="TARTA DE QUESO" data-section="Reserva" data-value="TARTA DE QUESO">TARTA DE QUESO </option>
+        <option value="CAFÉ O INFUSIÓN" data-section="Reserva" data-value="CAFÉ O INFUSIÓN">CAFÉ O INFUSIÓN</option>
+
+
+      </select>
+
+
+    </div>
+
+
+    <div class="meu-elec" id="menu-35">
+
+      <div class="meu-item">Menú 35€</div>
+      <p data-section="Reserva" data-value="entrante"><strong>Entrante</strong></p>
+      <select class="menuselec-food" name="entrante[]">
+        <option value="Selecciona tu entrante" data-section="Reserva" data-value="Selecciona tu entrante">Selecciona tu
+          entrante</option>
+        <option value="CROQUETAS" data-section="Reserva" data-value="CROQUETAS">CROQUETAS </option>
+
+        <option value="PATATAS BRAVAS" data-section="Reserva" data-value="PATATAS BRAVAS">PATATAS BRAVAS</option>
+        <option value="BERENJENAS FRITAS C/MIEL DE CAÑA" data-section="Reserva"
+          data-value="BERENJENAS FRITAS C/MIEL DE CAÑA">BERENJENAS FRITAS C/MIEL DE CAÑA</option>
+        <option value="HUEVOS ROTOS C/JAMÓN" data-section="Reserva" data-value="HUEVOS ROTOS C/JAMÓN">HUEVOS ROTOS
+          C/JAMÓN</option>
+        <option value="PUNTILLITAS FRITAS" data-section="Reserva" data-value="PUNTILLITAS FRITAS">PUNTILLITAS FRITAS
+        </option>
+      </select>
+      <select class="menuselec-food" name="entrante[]">
+        <option value="Selecciona tu entrante" data-section="Reserva" data-value="Selecciona tu entrante">Selecciona tu
+          entrante</option>
+        <option value="CROQUETAS" data-section="Reserva" data-value="CROQUETAS">CROQUETAS </option>
+
+        <option value="PATATAS BRAVAS" data-section="Reserva" data-value="PATATAS BRAVAS">PATATAS BRAVAS</option>
+        <option value="BERENJENAS FRITAS C/MIEL DE CAÑA" data-section="Reserva"
+          data-value="BERENJENAS FRITAS C/MIEL DE CAÑA">BERENJENAS FRITAS C/MIEL DE CAÑA</option>
+        <option value="HUEVOS ROTOS C/JAMÓN" data-section="Reserva" data-value="HUEVOS ROTOS C/JAMÓN">HUEVOS ROTOS
+          C/JAMÓN</option>
+        <option value="PUNTILLITAS FRITAS" data-section="Reserva" data-value="PUNTILLITAS FRITAS">PUNTILLITAS FRITAS
+        </option>
+      </select>
+      <select class="menuselec-food" name="entrante[]">
+        <option value="Selecciona tu entrante" data-section="Reserva" data-value="Selecciona tu entrante">Selecciona tu
+          entrante</option>
+        <option value="CROQUETAS" data-section="Reserva" data-value="CROQUETAS">CROQUETAS </option>
+
+        <option value="PATATAS BRAVAS" data-section="Reserva" data-value="PATATAS BRAVAS">PATATAS BRAVAS</option>
+        <option value="BERENJENAS FRITAS C/MIEL DE CAÑA" data-section="Reserva"
+          data-value="BERENJENAS FRITAS C/MIEL DE CAÑA">BERENJENAS FRITAS C/MIEL DE CAÑA</option>
+        <option value="HUEVOS ROTOS C/JAMÓN" data-section="Reserva" data-value="HUEVOS ROTOS C/JAMÓN">HUEVOS ROTOS
+          C/JAMÓN</option>
+        <option value="PUNTILLITAS FRITAS" data-section="Reserva" data-value="PUNTILLITAS FRITAS">PUNTILLITAS FRITAS
+        </option>
+      </select>
+
+
+      <p data-section="Reserva" data-value="principal"> <strong> Principal</strong></p>
+      <select class="menuselec-food" name="principal[]">
+        <option value="Selecciona tu principal" data-section="Reserva" data-value="Selecciona tu principal">Selecciona
+          tu principal</option>
+        <option value="CARRILLADA" data-section="Reserva" data-value="CARRILLADA">CARRILLADA</option>
+        <option value="HAMBURGUESA PADILLA" data-section="Reserva" data-value="HAMBURGUESA PADILLA">HAMBURGUESA PADILLA
+        </option>
+        <option value="PAELLA DE MARISCOS" data-section="Reserva" data-value="PAELLA DE MARISCOS">PAELLA DE MARISCOS
+        </option>
+        <option value="PAELLA DE VEGETALES" data-section="Reserva" data-value="PAELLA DE VEGETALES">PAELLA DE VEGETALES
+        </option>
+        <option value="PAELLA DE POLLO" data-section="Reserva" data-value="PAELLA DE POLLO">PAELLA DE POLLO</option>
+
+      </select>
+      <select class="menuselec-food" name="principal[]">
+        <option value="Selecciona tu principal" data-section="Reserva" data-value="Selecciona tu principal">Selecciona
+          tu principal</option>
+        <option value="CARRILLADA" data-section="Reserva" data-value="CARRILLADA">CARRILLADA</option>
+        <option value="HAMBURGUESA PADILLA" data-section="Reserva" data-value="HAMBURGUESA PADILLA">HAMBURGUESA PADILLA
+        </option>
+        <option value="PAELLA DE MARISCOS" data-section="Reserva" data-value="PAELLA DE MARISCOS">PAELLA DE MARISCOS
+        </option>
+        <option value="PAELLA DE VEGETALES" data-section="Reserva" data-value="PAELLA DE VEGETALES">PAELLA DE VEGETALES
+        </option>
+        <option value="PAELLA DE POLLO" data-section="Reserva" data-value="PAELLA DE POLLO">PAELLA DE POLLO</option>
+
+      </select>
+      <select class="menuselec-food" name="principal[]">
+        <option value="Selecciona tu principal" data-section="Reserva" data-value="Selecciona tu principal">Selecciona
+          tu principal</option>
+        <option value="CARRILLADA" data-section="Reserva" data-value="CARRILLADA">CARRILLADA</option>
+        <option value="HAMBURGUESA PADILLA" data-section="Reserva" data-value="HAMBURGUESA PADILLA">HAMBURGUESA PADILLA
+        </option>
+        <option value="PAELLA DE MARISCOS" data-section="Reserva" data-value="PAELLA DE MARISCOS">PAELLA DE MARISCOS
+        </option>
+        <option value="PAELLA DE VEGETALES" data-section="Reserva" data-value="PAELLA DE VEGETALES">PAELLA DE VEGETALES
+        </option>
+        <option value="PAELLA DE POLLO" data-section="Reserva" data-value="PAELLA DE POLLO">PAELLA DE POLLO</option>
+
+      </select>
+      <p data-section="Reserva" data-value="postre"><strong>Postre</strong></p>
+      <select class="menuselec-food" name="postre[]">
+        <option value="Selecciona tu postre " data-section="Reserva" data-value="Selecciona tu postre">Selecciona tu
+          postre</option>
+        <option value="CREMA CATALANA" data-section="Reserva" data-value="CREMA CATALANA">CREMA CATALANA</option>
+        <option value="TARTA DE QUESO" data-section="Reserva" data-value="TARTA DE QUESO">TARTA DE QUESO </option>
+        <option value="CAFÉ O INFUSIÓN" data-section="Reserva" data-value="CAFÉ O INFUSIÓN">CAFÉ O INFUSIÓN</option>
+
+
+      </select>
+
+
+      <select class="menuselec-food" name="postre[]">
+        <option value="Selecciona tu postre " data-section="Reserva" data-value="Selecciona tu postre">Selecciona tu
+          postre</option>
+        <option value="CREMA CATALANA" data-section="Reserva" data-value="CREMA CATALANA">CREMA CATALANA</option>
+        <option value="TARTA DE QUESO" data-section="Reserva" data-value="TARTA DE QUESO">TARTA DE QUESO </option>
+        <option value="CAFÉ O INFUSIÓN" data-section="Reserva" data-value="CAFÉ O INFUSIÓN">CAFÉ O INFUSIÓN</option>
+
+
+      </select>
+
+
+      <select class="menuselec-food" name="postre[]">
+        <option value="Selecciona tu postre " data-section="Reserva" data-value="Selecciona tu postre">Selecciona tu
+          postre</option>
+        <option value="CREMA CATALANA" data-section="Reserva" data-value="CREMA CATALANA">CREMA CATALANA</option>
+        <option value="TARTA DE QUESO" data-section="Reserva" data-value="TARTA DE QUESO">TARTA DE QUESO </option>
+        <option value="CAFÉ O INFUSIÓN" data-section="Reserva" data-value="CAFÉ O INFUSIÓN">CAFÉ O INFUSIÓN</option>
+
+
+      </select>
+
+    </div>
+    <div class="meu-elec" id="menu-45">
+
+      <div class="meu-item">Menú 45€</div>
+      <p data-section="Reserva" data-value="bebida"><strong>Bebida</strong></p>
+      <select class="menuselec-food" name="bebida[]">
+        <option value="Selecciona tu bebida" data-section="Reserva" data-value="Selecciona tu bebida">Selecciona tu
+          bebida</option>
+        <option value="CERVEZA " data-section="Reserva" data-value="CERVEZA">CERVEZA </option>
+        <option value="SANGRIA" data-section="Reserva" data-value="SANGRIA">SANGRIA</option>
+        <option value="TINTO DE VERANO" data-section="Reserva" data-value="TINTO DE VERANO">TINTO DE VERANO</option>
+        <option value="GASEOSA ILIMITADA POR 1hs30min" data-section="Reserva"
+          data-value="GASEOSA ILIMITADA POR 1hs30min">GASEOSA ILIMITADA POR 1hs30min</option>
+
+      </select>
+
+      <select class="menuselec-food" name="bebida[]">
+        <option value="Selecciona tu bebida" data-section="Reserva" data-value="Selecciona tu bebida">Selecciona tu
+          bebida</option>
+        <option value="CERVEZA " data-section="Reserva" data-value="CERVEZA">CERVEZA </option>
+        <option value="SANGRIA" data-section="Reserva" data-value="SANGRIA">SANGRIA</option>
+        <option value="TINTO DE VERANO" data-section="Reserva" data-value="TINTO DE VERANO">TINTO DE VERANO</option>
+        <option value="GASEOSA ILIMITADA POR 1hs30min" data-section="Reserva"
+          data-value="GASEOSA ILIMITADA POR 1hs30min">GASEOSA ILIMITADA POR 1hs30min</option>
+
+      </select>
+
+      <select class="menuselec-food" name="bebida[]">
+        <option value="Selecciona tu bebida" data-section="Reserva" data-value="Selecciona tu bebida">Selecciona tu
+          bebida</option>
+        <option value="CERVEZA " data-section="Reserva" data-value="CERVEZA">CERVEZA </option>
+        <option value="SANGRIA" data-section="Reserva" data-value="SANGRIA">SANGRIA</option>
+        <option value="TINTO DE VERANO" data-section="Reserva" data-value="TINTO DE VERANO">TINTO DE VERANO</option>
+        <option value="GASEOSA ILIMITADA POR 1hs30min" data-section="Reserva"
+          data-value="GASEOSA ILIMITADA POR 1hs30min">GASEOSA ILIMITADA POR 1hs30min</option>
+
+      </select>
+      <p data-section="Reserva" data-value="entrante"><strong>Entrante</strong></p>
+      <select class="menuselec-food" name="entrante[]">
+        <option value="Selecciona tu entrante" data-section="Reserva" data-value="Selecciona tu entrante">Selecciona tu
+          entrante</option>
+        <option value="CROQUETAS" data-section="Reserva" data-value="CROQUETAS">CROQUETAS </option>
+
+        <option value="PATATAS BRAVAS" data-section="Reserva" data-value="PATATAS BRAVAS">PATATAS BRAVAS</option>
+        <option value="BERENJENAS FRITAS C/MIEL DE CAÑA" data-section="Reserva"
+          data-value="BERENJENAS FRITAS C/MIEL DE CAÑA">BERENJENAS FRITAS C/MIEL DE CAÑA</option>
+        <option value="HUEVOS ROTOS C/JAMÓN" data-section="Reserva" data-value="HUEVOS ROTOS C/JAMÓN">HUEVOS ROTOS
+          C/JAMÓN</option>
+        <option value="PUNTILLITAS FRITAS" data-section="Reserva" data-value="PUNTILLITAS FRITAS">PUNTILLITAS FRITAS
+        </option>
+      </select>
+
+      <select class="menuselec-food" name="entrante[]">
+        <option value="Selecciona tu entrante" data-section="Reserva" data-value="Selecciona tu entrante">Selecciona tu
+          entrante</option>
+        <option value="CROQUETAS" data-section="Reserva" data-value="CROQUETAS">CROQUETAS </option>
+
+        <option value="PATATAS BRAVAS" data-section="Reserva" data-value="PATATAS BRAVAS">PATATAS BRAVAS</option>
+        <option value="BERENJENAS FRITAS C/MIEL DE CAÑA" data-section="Reserva"
+          data-value="BERENJENAS FRITAS C/MIEL DE CAÑA">BERENJENAS FRITAS C/MIEL DE CAÑA</option>
+        <option value="HUEVOS ROTOS C/JAMÓN" data-section="Reserva" data-value="HUEVOS ROTOS C/JAMÓN">HUEVOS ROTOS
+          C/JAMÓN</option>
+        <option value="PUNTILLITAS FRITAS" data-section="Reserva" data-value="PUNTILLITAS FRITAS">PUNTILLITAS FRITAS
+        </option>
+      </select>
+
+      <select class="menuselec-food" name="entrante[]">
+        <option value="Selecciona tu entrante" data-section="Reserva" data-value="Selecciona tu entrante">Selecciona tu
+          entrante</option>
+        <option value="CROQUETAS" data-section="Reserva" data-value="CROQUETAS">CROQUETAS </option>
+
+        <option value="PATATAS BRAVAS" data-section="Reserva" data-value="PATATAS BRAVAS">PATATAS BRAVAS</option>
+        <option value="BERENJENAS FRITAS C/MIEL DE CAÑA" data-section="Reserva"
+          data-value="BERENJENAS FRITAS C/MIEL DE CAÑA">BERENJENAS FRITAS C/MIEL DE CAÑA</option>
+        <option value="HUEVOS ROTOS C/JAMÓN" data-section="Reserva" data-value="HUEVOS ROTOS C/JAMÓN">HUEVOS ROTOS
+          C/JAMÓN</option>
+        <option value="PUNTILLITAS FRITAS" data-section="Reserva" data-value="PUNTILLITAS FRITAS">PUNTILLITAS FRITAS
+        </option>
+      </select>
+
+
+
+      <p data-section="Reserva" data-value="principal"><strong> Principal</strong></p>
+      <select class="menuselec-food" name="principal[]">
+        <option value="Selecciona tu principal" data-section="Reserva" data-value="Selecciona tu principal">Selecciona
+          tu principal</option>
+        <option value="CARRILLADA" data-section="Reserva" data-value="CARRILLADA">CARRILLADA</option>
+        <option value="HAMBURGUESA PADILLA" data-section="Reserva" data-value="HAMBURGUESA PADILLA">HAMBURGUESA PADILLA
+        </option>
+        <option value="PAELLA DE MARISCOS" data-section="Reserva" data-value="PAELLA DE MARISCOS">PAELLA DE MARISCOS
+        </option>
+        <option value="PAELLA DE VEGETALES" data-section="Reserva" data-value="PAELLA DE VEGETALES">PAELLA DE VEGETALES
+        </option>
+        <option value="PAELLA DE POLLO" data-section="Reserva" data-value="PAELLA DE POLLO">PAELLA DE POLLO</option>
+
+      </select>
+
+      <select class="menuselec-food" name="principal[]">
+        <option value="Selecciona tu principal" data-section="Reserva" data-value="Selecciona tu principal">Selecciona
+          tu principal</option>
+        <option value="CARRILLADA" data-section="Reserva" data-value="CARRILLADA">CARRILLADA</option>
+        <option value="HAMBURGUESA PADILLA" data-section="Reserva" data-value="HAMBURGUESA PADILLA">HAMBURGUESA PADILLA
+        </option>
+        <option value="PAELLA DE MARISCOS" data-section="Reserva" data-value="PAELLA DE MARISCOS">PAELLA DE MARISCOS
+        </option>
+        <option value="PAELLA DE VEGETALES" data-section="Reserva" data-value="PAELLA DE VEGETALES">PAELLA DE VEGETALES
+        </option>
+        <option value="PAELLA DE POLLO" data-section="Reserva" data-value="PAELLA DE POLLO">PAELLA DE POLLO</option>
+
+      </select>
+      <select class="menuselec-food" name="principal[]">
+        <option value="Selecciona tu principal" data-section="Reserva" data-value="Selecciona tu principal">Selecciona
+          tu principal</option>
+        <option value="CARRILLADA" data-section="Reserva" data-value="CARRILLADA">CARRILLADA</option>
+        <option value="HAMBURGUESA PADILLA" data-section="Reserva" data-value="HAMBURGUESA PADILLA">HAMBURGUESA PADILLA
+        </option>
+        <option value="PAELLA DE MARISCOS" data-section="Reserva" data-value="PAELLA DE MARISCOS">PAELLA DE MARISCOS
+        </option>
+        <option value="PAELLA DE VEGETALES" data-section="Reserva" data-value="PAELLA DE VEGETALES">PAELLA DE VEGETALES
+        </option>
+        <option value="PAELLA DE POLLO" data-section="Reserva" data-value="PAELLA DE POLLO">PAELLA DE POLLO</option>
+
+      </select>
+      <p data-section="Reserva" data-value="postre"><strong>Postre</strong></p>
+      <select class="menuselec-food" name="postre[]">
+        <option value="Selecciona tu postre " data-section="Reserva" data-value="Selecciona tu postre">Selecciona tu
+          postre</option>
+        <option value="CREMA CATALANA" data-section="Reserva" data-value="CREMA CATALANA">CREMA CATALANA</option>
+        <option value="TARTA DE QUESO" data-section="Reserva" data-value="TARTA DE QUESO">TARTA DE QUESO </option>
+        <option value="CAFÉ O INFUSIÓN" data-section="Reserva" data-value="CAFÉ O INFUSIÓN">CAFÉ O INFUSIÓN</option>
+
+
+      </select>
+
+      <select class="menuselec-food" name="postre[]">
+        <option value="Selecciona tu postre " data-section="Reserva" data-value="Selecciona tu postre">Selecciona tu
+          postre</option>
+        <option value="CREMA CATALANA" data-section="Reserva" data-value="CREMA CATALANA">CREMA CATALANA</option>
+        <option value="TARTA DE QUESO" data-section="Reserva" data-value="TARTA DE QUESO">TARTA DE QUESO </option>
+        <option value="CAFÉ O INFUSIÓN" data-section="Reserva" data-value="CAFÉ O INFUSIÓN">CAFÉ O INFUSIÓN</option>
+
+
+      </select>
+
+
+      <select class="menuselec-food" name="postre[]">
+        <option value="Selecciona tu postre " data-section="Reserva" data-value="Selecciona tu postre">Selecciona tu
+          postre</option>
+        <option value="CREMA CATALANA" data-section="Reserva" data-value="CREMA CATALANA">CREMA CATALANA</option>
+        <option value="TARTA DE QUESO" data-section="Reserva" data-value="TARTA DE QUESO">TARTA DE QUESO </option>
+        <option value="CAFÉ O INFUSIÓN" data-section="Reserva" data-value="CAFÉ O INFUSIÓN">CAFÉ O INFUSIÓN</option>
+
+
+      </select>
+
+    </div>
+
+
+
+
+  </div>
+  <form class="form" id="tuFormulario" action="https://backgrupoam.onrender.com/reservar" method="POST">
+    <h4 data-section="formulario" data-value="formulario_reserva">Formulario de Reserva</h4>
+    <div class="container-form"> <label data-section="formulario_reserva" data-value="nombre">Nombre:</label><input
+        type="text" id="nombre" name="nombre" placeholder="Nombre">
+      <label data-section="formulario" data-value="numero_contacto">N° de contacto:</label><input type="number"
+        name="contacto" id="contacto" placeholder="Número">
+      <label data-section="formulario" data-value="email">Email:</label><input type="email" name="email" id="email"
+        placeholder="Email">
+      <label data-section="formulario" data-value="cantidad_comensales">Cantidad de Comensales:</label><input
+        type="number" id="comensales" name="comensales" placeholder="Comensales">
+      <label data-section="formulario" data-value="menu_elegido">Menu elegido</label><select name="menu_elegido"
+        id="menu_elegido" class="menuselec">
+        <option>-Selecione-</option>
+        <option>Menu 25€</option>
+        <option>Menu 35€</option>
+        <option>Menu 45€</option>
+        <input type="hidden" name="menu_tipo" id="menu_tipo">
+        <label data-section="formulario" data-value="selecciona_fecha">Selecciona una fecha:</label>
+        <input type="date" name="fecha" id="fecha" class="fecha-hora" style="color: rgb(117, 117, 117);">
+
+        <label data-section="formulario" data-value="selecciona_hora">Selecciona una hora:</label>
+        <input type="time" name="hora" class="fecha-hora" id="hora" style="color: rgb(117, 117, 117);">
+
+        <div class="cancelar-enviar"><input class="enviar-cancelar" type="submit" value="Enviar"
+            data-section="formulario" data-value="enviar">
+          <input class="enviar-cancelar" type="reset" value="Cancelar" data-section="formulario" data-value="cancelar">
+        </div>
+    </div>
+    <div class="nota"><img class="icono" src="iconos/asterisk_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg">
+      <p data-section="formulario" data-value="deposit_info">Todas las resevas de grupo requieren una seña de 5€ por
+        perosna.</p>
+    </div>
+  </form>
+  <footer class="footer-leg"><img src="img/Asset 1.png" class="footer-flor-leg"></footer>
+    <footer class="footer-j">
+    <div class="foot">By Grupo AM<br> Todos los derechos reservados.</div>
+    <div class="contacto">MANTENTE EN CONTACTO</div>
+    <div class="social-icons">
+       <a href="https://www.instagram.com/grupoamsl/" target="_blank"> <img class="icon-22" src="iconos/logotipo-de-instagram.png"
+          alt="Instagram"></a>
+      <a href="https://www.tiktok.com/@grupoamsl?_t=ZN-8vS4LksSJqo&_r=1" target="_blank"><img class="icon-33"
+          src="iconos/tiktok.svg" alt="TikTok"></a>
+    </div>
+    <div class="footer-legal">
+      <div ><a href="avisoLegal.html" class="legal">Aviso Legal</a></div>
+      <div> <a href="quienessomos.html" class="legal">¿Quiénes somos?</a></div>
+      <div><a href="trabaja.html" class="legal">Trabaja con nosotros</a></div>
+    </div>
+  </footer>
+  <script src="js/familia.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+      const $overlay = $('#pageloader-overlay');
+      const $gif = $('#loader-gif');
+
+      setTimeout(function () {
+        $gif.addClass('loader-hide');
+
+        setTimeout(function () {
+          $overlay.addClass('hidden');
+        }, 1000);
+      }, 2000);
+    });
+  </script>
+
+<script>
+  // Función para leer cookies
+  function leerCookie(nombre) {
+    const cookies = document.cookie.split('; ');
+    for (let i = 0; i < cookies.length; i++) {
+      const [clave, valor] = cookies[i].split('=');
+      if (clave === nombre) return decodeURIComponent(valor);
+    }
+    return null;
+  }
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const nombreUsuario = leerCookie('nombreUsuario');
+    if (nombreUsuario) {
+      document.getElementById('nombre').value = nombreUsuario;
+    }
+  });
+</script>
+  <script>
+    const selectMenu = document.getElementById("menu_elegido");
+    const inputMenuTipo = document.getElementById("menu_tipo");
+
+    selectMenu.addEventListener("change", () => {
+      const selected = selectMenu.value;
+
+      if (selected.includes("25")) {
+        inputMenuTipo.value = 25;
+      } else if (selected.includes("35")) {
+        inputMenuTipo.value = 35;
+      } else if (selected.includes("45")) {
+        inputMenuTipo.value = 45;
+      } else {
+        inputMenuTipo.value = "";
+      }
+    });
+
+    function obtenerPlatos(menuTipo) {
+      const entrantes = Array.from(document.querySelectorAll(`select[name="entrante[]"]`))
+        .map(s => s.value)
+        .filter(v => v && !v.includes("Selecciona"));
+
+      const principales = Array.from(document.querySelectorAll(`select[name="principal[]"]`))
+        .map(s => s.value)
+        .filter(v => v && !v.includes("Selecciona"));
+
+      const postres = Array.from(document.querySelectorAll(`select[name="postre[]"]`))
+        .map(s => s.value)
+        .filter(v => v && !v.includes("Selecciona"));
+
+      const bebidas = Array.from(document.querySelectorAll(`select[name="bebida[]"]`))
+        .map(s => s.value)
+        .filter(v => v && !v.includes("Selecciona"));
+
+      return { entrantes, principales, postres, bebidas };
+    }
+
+ document.getElementById("tuFormulario").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const menu_tipo = document.getElementById("menu_tipo").value;
+  const { entrantes, principales, postres, bebidas } = obtenerPlatos(menu_tipo);
+
+  const nombre = document.getElementById("nombre").value;
+  const contacto = document.getElementById("contacto").value;
+  const email = document.getElementById("email").value;
+  const comensales = document.getElementById("comensales").value;
+  const menu_elegido = selectMenu.value;
+  const fecha = document.getElementById("fecha").value;
+  const hora = document.getElementById("hora").value;
+
+  const reservaData = {
+    nombre,
+    contacto,
+    email,
+    comensales,
+    menu_elegido,
+    menu_tipo,
+    fecha,
+    hora,
+    entrantes,
+    principales,
+    postres,
+    bebidas
+  };
+
+  console.log("Datos enviados:", reservaData);
+
+  fetch("https://backgrupoam.onrender.com/reservas", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(reservaData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log("Reserva enviada:", data);
+    
+    const mensaje = document.getElementById("mensaje-reserva");
+
+    if (data.message === "Reserva realizada correctamente") {
+      mostrarToast("¡Reserva realizada correctamente!", "success");
+      document.getElementById("tuFormulario").reset();
+      inputMenuTipo.value = "";
+    } else {
+      mostrarToast("Error: " + (data.error || "No se pudo procesar la reserva."), "error");
+    }
+  })
+  .catch(error => {
+    console.error("Error al enviar la reserva:", error);
+    const mensaje = document.getElementById("mensaje-reserva");
+    mensaje.style.color = "red";
+    mostrarToast("Error al conectar con el servidor.", "error");
+  });
+
+  // Función para mostrar el toast
+  function mostrarToast(mensaje, tipo = "success") {
+    const toast = document.getElementById("toast");
+    toast.textContent = mensaje;
+    toast.className = `toast show ${tipo}`;
+    
+    setTimeout(() => {
+      toast.classList.remove("show");
+      toast.classList.add("hidden");
+    }, 4000);
+  }
+
+}); 
+
+
+
+
+function mostrarToast(mensaje, tipo = "success") {
+  const toast = document.getElementById("toast");
+  toast.textContent = mensaje;
+  toast.className = `toast show ${tipo}`;
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+    toast.classList.add("hidden");
+  }, 4000);
+}
+
+  </script>
+
+
+ <div id="toast" class="toast hidden"></div>
+</body>
+
+</html>

@@ -1,0 +1,596 @@
+@font-face {
+    font-family: 'Futura';
+    src: url(futurabt-bookitalic-version-2-001-mfgpctt-4-4.ttf);
+}
+
+@font-face {
+    font-family: 'Glomerolus';
+    src: url(Glomerolus.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Futura';
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+/* Estilo para la barra de navegación */
+nav {
+    z-index: 10;
+    position: relative;
+    width: 100%;
+}
+
+/* Contenedor de los elementos del menú */
+.contenedor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+    z-index: 1001
+}
+
+/* Botón de menú */
+.menu-btn {
+    background: transparent;
+    color: rgba(248, 249, 247, 0.989);
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+/* Icono del botón de menú */
+.menu-btn .icon {
+    margin-right: 8px;
+    filter: invert(97%) sepia(99%) saturate(261%) hue-rotate(299deg) brightness(109%) contrast(97%);
+}
+
+/* Estilos para el menú desplegable */
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: rgb(238, 232, 218);
+    width: 250px;
+    height: 100vh;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Cuando el menú está abierto */
+.menu.open {
+    display: block;
+    left: 0;
+}
+
+.close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.menu-btn:focus,
+.close-btn:focus,
+.language-btn:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Estilo para los elementos del menú */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo de los items del menú */
+.menu ul li u {
+   padding: 10px 10px;
+ }
+
+
+/* Estilo para los enlaces del menú */
+.menu ul li a {
+    color: rgb(14, 1, 1);
+    text-decoration: none;
+    display: block;
+    line-height: 1.6;
+}
+
+/* Efecto hover en los enlaces */
+.menu ul li a:hover {
+    background-color: rgba(216, 19, 19, 0.127);
+    color: rgb(24, 2, 2);
+    border-radius: 5px;
+}
+ u {
+     font-family: 'Futura';
+     text-decoration: none;
+     
+ }
+
+
+
+/* Estilo del título */
+h1 {
+    font-size: 30px;
+    font-weight: 800;
+    z-index: 40;
+    color: rgba(249, 247, 247, 0.989);
+    text-align: center;
+    font-family: 'Glomerolus';
+}
+
+.title {
+    font-family: 'Glomerolus';
+    font-size: 40px;
+    color: rgb(242, 232, 208);
+}
+
+.Resto {
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.container-name {
+    background: transparent;
+    color: black;
+    font-size: 18px;
+    font-family: 'Futura';
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+}
+
+.icon-rest {
+    width: 50px;
+    margin: 0;
+    margin-right: 5px;
+    cursor: pointer;
+
+}
+
+
+.linea {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* Estilo de los iconos sociales */
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icon-2 {
+    width: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+
+.icon-3 {
+    width: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    filter: invert(97%) sepia(99%) saturate(261%) hue-rotate(299deg) brightness(109%) contrast(97%);
+}
+
+.icon-2:hover {
+    transform: translateY(-2px);
+}
+
+.icon-3:hover {
+    transform: translateY(-2px);
+}
+
+img,
+.icon-rest,
+.icon-2,
+.icon-3 {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo del selector de idioma */
+.language-select {
+    position: relative;
+    margin-left: 15px;
+}
+
+/* Botón de idioma */
+.language-btn {
+    background: transparent;
+    color: rgb(232, 216, 216);
+    text-decoration: none;
+    display: block;
+    padding: 5px 5px 0;
+    font-size: 18px;
+    border: 2px rgb(238, 230, 215) solid;
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: center;
+    padding-right: 5px;
+    margin-right: 5px;
+
+
+}
+
+.language-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Menú desplegable de idiomas */
+.language-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgb(238, 230, 215);
+    width: 150px;
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+/* Mostrar el menú de idiomas cuando se activa */
+.language-menu.open {
+    display: block;
+}
+
+/* Estilo para los enlaces de idiomas */
+.language-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.language-menu ul li {
+    padding: 10px;
+
+}
+
+.language-menu ul li a {
+    color: rgb(14, 1, 1);
+    text-decoration: none;
+    display: block;
+}
+
+/* Efecto hover en los enlaces del selector de idioma */
+.language-menu ul li a:hover {
+    background-color: rgba(216, 19, 19, 0.127);
+    color: rgb(29, 3, 3);
+}
+
+/* Flexbox para organizar los elementos dentro de .con--2 */
+.con--2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el botón de cierre del menú */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: black;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.close-btn:hover {
+    background-color: rgba()
+}
+
+.footer-j {
+    display: flex;
+    background-color: rgb(242, 232, 208);
+    padding: 40px 40px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Glomerolus';
+    position: relative; 
+    margin-top: 1rem;
+}
+
+/* Estilos actuales para pantallas grandes */
+.footer-legal {
+    position: absolute;
+    left: 85rem;
+    cursor: pointer;
+}
+
+.social-icons2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    left: 47%;
+    margin-top: 20px;
+}
+
+.contacto1 {
+    position: absolute;
+    left: 45%;
+}
+
+.icon- {
+    width: 27px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.icon-6 {
+    width: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.legal {
+    text-decoration: none;
+    color: black;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 767px) {
+    .footer-j {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        position: static; 
+        font-size: 14px;
+    }
+
+    /* Quitar posiciones absolutas para que fluya vertical */
+    .footer-legal,
+    .social-icons2,
+    .contacto1 {
+        position: static;
+        margin: 10px 0;
+        left: auto;
+        top: auto;
+    }
+
+    .footer-legal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .social-icons2 {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .contacto1 {
+        font-weight: bold;
+    }
+
+    /* Ajustar iconos para que no sean tan grandes */
+    .icon-{
+        width: 24px;
+        margin-left: 5px;
+    }
+
+    .icon-6 {
+        width: 28px;
+        margin-left: 5px;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Footer Styles */
+
+.politica-privacidad {
+    width: 50%;
+    position: absolute;
+    left: 30%;
+    margin-top: 10rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    /* Ocultar video y mostrar imagen */
+    #background-video {
+        display: none;
+    }
+
+    #background-image {
+        display: block;
+    }
+
+    /* Mostrar la frase solo en responsive */
+    .responsive-text {
+        display: block;
+    }
+
+    .politica-privacidad {
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        left: 30%;
+        margin-top: 50px;
+    }
+}
+
+
+
+@media (max-width: 420px) {
+    .menu {
+        width: 100%;
+        left: -100%;
+    }
+
+    .menu.open {
+        left: 0;
+    }
+
+    .footer-j {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-legal {
+        align-items: center;
+        margin-top: 10px;
+    }
+    .social-icon2 {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+    }
+    .contacto {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+   
+
+    .politica-privacidad {
+        width: 80%;
+        height: auto;
+        position: relative;
+        left: 10%;
+
+        margin-right: 10rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+   .menu ul li u {
+         padding: 5px 5px;
+         text-decoration: none;
+           font-size: 25px;
+     }
+
+    u{
+    font-size: 25px;
+}
+    
+
+     .container-name {
+         font-size: 25px;
+     }
+}
+
+@media (max-width: 420px) {
+
+   .menu-btn {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+         margin-top: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .menu-btn .icon {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        margin-left: 7px;
+        margin-top: 2px;
+        display: block;
+        filter: invert(97%) sepia(99%) saturate(261%) hue-rotate(299deg) brightness(109%) contrast(97%);
+    }
+    .language-btn {
+        font-size: 12px;
+        width: 28px;
+        height: 28px;
+    }
+
+    .social-icons {
+        font-size: 12px;
+    }
+
+    .language-btn {
+        padding-right: 2px;
+    }
+
+    .icon-rest {
+        font-size: 12px;
+        width: 28px;
+        height: 28px;
+        margin-bottom: -4px;
+    }
+
+    .title {
+        font-size: 15px;
+        width: 100%;
+        height: 28px;
+       margin-bottom: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .menu {
+        width: 100vw;
+        height: 100vh;
+        left: -100vw;
+        z-index: 2000; 
+    }
+
+    .menu.open {
+        left: 0;
+    }
+
+   
+}

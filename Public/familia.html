@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Familia</title>
+  <link rel="stylesheet" href="css/receta.css">
+  <link rel="icon" href="img/Asset 1.png" type="image/png">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    #pageloader-overlay {
+      opacity: 1;
+      top: 0;
+      left: 0;
+      position: fixed;
+      background-color: rgba(255, 255, 255, 1);
+      height: 100%;
+      width: 100%;
+      z-index: 9998;
+      transition: opacity 0.2s linear;
+
+    }
+
+    #pageloader-overlay.hidden {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      z-index: -10000;
+    }
+
+    .loader-wrapper-outer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .loader-hide {
+      animation: fadeOutScale 1s ease forwards;
+    }
+
+    #loader-gif {
+      width: 200px;
+      height: auto;
+    }
+
+    @keyframes fadeOutScale {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+    }
+
+    .contenido {
+      padding: 40px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body class="section-familia">
+  <div id="pageloader-overlay">
+    <div class="loader-wrapper-outer" style="background-color: rgb(238, 232, 218);">
+      <img id="loader-gif" src="img/IMG-4269G-unscreen.gif" alt="Cargando..." width="100"
+        style="background-color: rgb(238, 232, 218);">
+    </div>
+  </div>
+
+  <nav class="nav">
+    <section class="con--2">
+      <!-- Menu -->
+      <div class="contenedor">
+        <button class="menu-btn" id="menu-toggle">
+          <img class="icon" src="iconos/menu.svg" alt="Menu" id="menu-icon" data-section="Menu principal"
+            data-value="menu">Menú
+        </button>
+        <div class="menu" id="menu">
+
+          <button class="close-btn" id="close-menu">X</button>
+          <ul>
+            <h3 class="Resto" id="restaurants-title" data-section="Menu principal" data-value="restaurants"
+              style="font-family: 'Glomerolus'; margin-bottom: 10px;"><u >RESTAURANTES</u></h3>
+            <li>
+              <div><a href="esquinapadilla.html" id="item-1" class="item-name">
+
+                  <div class="container-name" style="font-family: 'Glomerolus';">
+                    ESQUINA PADILLA
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li><a href="granada.html" id="item-2">
+                <div class="container-name" style="font-family: 'Glomerolus';">ESQUINA GRANADA</div>
+              </a></li>
+            <li><a href="creando.html" id="item-3">
+                <div class="container-name" style="font-family: 'Glomerolus';">ESQUINA PLAZA CAMAS</div>
+              </a></li>
+               <hr style="width: 80%; margin-left: 20px; margin-bottom: 10px; margin-top: 10px;">
+            <li><a href="creando.html" id="item-4" data-section="Menu principal" data-value="item1">
+                <h3><u>RESERVA DE GRUPOS</u></h3>
+              </a></li>
+            <li><a href="recetaycocina.html" id="item-5" data-section="Menu principal" data-value="item2">
+                <h3><u>RECETA & COCINA</u></h3>
+              </a></li>
+            <li><a href="creando.html" id="item-6" data-section="Menu principal" data-value="item3">
+                <h3><u>FAMILIA</u></h3>
+              </a></li>
+            <li><a href="creando.html" id="item-7" data-section="Menu principal" data-value="item4">
+                <h3><u>HISTORIA & LEGADO</u></h3>
+              </a></li>
+            <li><a href="trabaja.html" id="item-8" data-section="Menu principal" data-value="item5">
+                <h3><u>TRABAJA CON NOSOTROS</u></h3>
+              </a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Titulo -->
+     <a href="index.html" style="text-decoration: none;">
+    <h1 class="title" id="title" style="color: black;">
+        <img src="img/Asset 1.png" class="icon-rest"> GRUPO AM
+    </h1>
+</a>
+
+      <div class="social-icons2">
+        <a href="https://www.instagram.com/grupoamsl/" target="_blank"> <img class="icon-2" src="iconos/instagram.svg"
+            alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@grupoamsl?_t=ZN-8vS4LksSJqo&_r=1" target="_blank"><img class="icon-3"
+            src="iconos/tiktok.svg" alt="TikTok"></a>
+
+
+        <!-- Menú de selección de idioma -->
+        <div class="language-select">
+          <button class="language-btn" id="language-toggle">ES</button>
+          <div class="language-menu" id="language-menu">
+            <ul>
+              <li class="opcion"><a href="#" id="language-es" data-language="es"><span>ES</span></a></li>
+              <li class="opcion"><a href="#" id="language-en" data-language="en"><span>EN</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <hr>
+  </nav>
+  <h1 class="ttitle" data-section="Familia" data-value="familia" style="color: rgb(163, 51, 59);">FAMILIA</h1>
+  <hr style="width: 50%; height: 2px; background: rgb(163, 51, 59);">
+
+
+
+  
+
+  <div class="conIm">
+    <img src="img/IMG_3379.JPG" alt="img4" class="img4">
+    <div class="text" data-section="Familia" data-value="intro_equipo">
+      <img src="iconos/right.png" class="text-icon" data-section="Familia" data-value="intro_equipo"> De la cocina al
+      salón, todos llevamos la misma pasión en el
+      delantal.
+      Cocineros, camareros, encargados, jefes de cocina. Da igual el puesto: aquí todos empujamos en la misma dirección.
+      Porque cuando hay alegría en el trabajo, hay magia en la mesa. <img src="iconos/left.png" class="text-icon">
+    </div>
+  </div>
+  <hr style="width: 95%; background: rgb(163, 51, 59); height: 3px;">
+  <div class="conIm">
+
+    <div class="text2" data-section="Familia" data-value="secreto_equipo"> <img src="iconos/right.png"
+        class="text-icon"> Nuestro secreto no está en una receta, está en el
+      equipo.
+      Y por eso lo cuidamos. Nos reímos juntos, nos apoyamos y nos conocemos de verdad. Esa energía se nota cuando
+      cruzás la puerta de cualquiera de nuestros restaurantes.<img src="iconos/left.png" class="text-icon">
+    </div>
+    <video src="video/IMG_3609.MOV" controls loop id="video" class="video1"></video>
+  </div>
+  <hr style="width: 95%; background: rgb(163, 51, 59); height: 3px;">
+  <div class="conIm">
+    <video src="video/IMG_3609.MOV" controls loop id="video1"></video>
+    <div class="text" data-section="Familia" data-value="trabajar_contento"> <img src="iconos/right.png"
+        class="text-icon"> Trabajar contento es el primer paso para hacer
+      felices a los demás.
+      Esa es nuestra forma de hacer las cosas. Si hay alegría en el equipo, hay calor en la atención. Si hay respeto y
+      cercanía dentro, hay hospitalidad y amor fuera.<img src="iconos/left.png" class="text-icon">
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container-footer">
+      <img src="img/Asset 1.png" class="footer-flor">
+      <p class="footer-text" data-section="Familia" data-value="creemos_trabajar_contentos">
+        Creemos en trabajar contentos.
+        En saludarnos con una sonrisa y despedirnos con orgullo de lo que hicimos ese día.
+        En aprender de la experiencia, compartir el plato y crecer desde adentro.
+        <br><br>
+        Aquí nadie es solo “un empleado”.
+        Somos cocineros que sueñan con nuevas recetas, camareros que conocen cada mesa, encargados que lideran con
+        cariño.
+        Nos movemos, nos conocemos, nos cuidamos.
+        <br><br>
+        Somos un grupo, sí.
+        Pero sobre todo, somos una familia.
+        Y cuando uno está feliz trabajando, eso se nota. Se siente. Se transmite.
+        <br><br>
+        Por eso la hospitalidad no es una técnica:
+        es una forma de estar en el mundo.
+      </p>
+    </div>
+  </footer>
+  <script src="js/familia.js"></script>
+ 
+  <script>
+    $(document).ready(function () {
+      const $overlay = $('#pageloader-overlay');
+      const $gif = $('#loader-gif');
+
+      setTimeout(function () {
+        $gif.addClass('loader-hide');
+
+        setTimeout(function () {
+          $overlay.addClass('hidden');
+        }, 1000);
+      }, 2000);
+    });
+  </script>
+
+</body>
+
+</html>

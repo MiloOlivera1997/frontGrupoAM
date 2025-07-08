@@ -1,0 +1,796 @@
+@font-face{
+    font-family: 'Futura';
+    src: url(futurabt-bookitalic-version-2-001-mfgpctt-4-4.ttf);
+}
+@font-face{
+    font-family: 'Glomerolus';
+    src: url(Glomerolus.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   background-image: 
+   linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+   url(RESTAURANTE.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+    flex-wrap: wrap;
+}
+
+
+.footer-j{
+    background-color: #120404;
+    padding: 40px 0;
+     flex-wrap: wrap;
+}
+
+
+
+.back{
+     background: rgba(163, 51, 58, 0.629);
+    width: 50%;
+    position: absolute;
+    right: 25%;
+  padding:5px;
+  margin-top: 3rem;
+   color: rgb(242, 232, 208);
+    text-align: center;
+    font-family:'Glomerolus' ;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-left: 20%;
+     flex-wrap: wrap;
+   
+    
+}
+
+
+.container{
+    width: 50%;
+    height: auto;
+    background: transparent;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 8rem;
+     flex-wrap: wrap;
+  
+}
+
+.item{
+    
+    color: aliceblue;
+    flex: none;
+    width: calc((100% - 10px) / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+     flex-wrap: wrap;
+}
+.name{
+    font-family: 'Futura';
+    text-decoration: none;
+    font-size: 2rem;
+    box-shadow: 5px;
+    color: rgb(19, 15, 15);
+}
+.FormContainer{
+    width: 500px;
+    background:rgb(238, 230, 215);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Futura';
+    color: black;
+    font-size: 20px;
+ flex-wrap: wrap;
+}
+.conform input{
+    width: 100%;
+    background: #9e875d4d;
+    padding: 10px;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px;
+    font-family: 'Futura';
+    font-size: 18px;
+    color: rgb(9, 14, 18);
+}
+
+.img{
+    width: 250px;
+     flex-wrap: wrap;
+    border-radius: 70px;
+ filter: saturate(120%);
+    border: 5px rgb(119, 49, 54) solid;
+  }
+textarea{
+    width: 90%;
+    background-color: rgb(238, 230, 215);
+    border:1px  rgb(214, 202, 178) solid;
+    
+}
+textarea:hover{
+    border-color: rgb(214, 202, 178);
+}
+.enviar{
+    width: 25%;
+    color:  rgb(117, 117, 117);
+
+}
+/* Estilo del selector de idioma */
+.language-select {
+    position: relative;
+    margin-left: 15px;
+}
+
+/* Botón de idioma */
+.language-btn {
+    background: transparent;
+    color: rgb(232, 216, 216);
+    text-decoration: none;
+    display: block;
+    padding: 5px 5px 0;
+    font-size: 18px;
+    border: 2px rgb(238, 230, 215) solid;
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: center;
+    padding-right: 5px;
+    margin-right: 5px;
+
+
+}
+.language-btn:hover{
+    transform: translateY(-2px);
+}
+
+/* Menú desplegable de idiomas */
+.language-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgb(238, 230, 215);
+    width: 150px;
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+/* Mostrar el menú de idiomas cuando se activa */
+.language-menu.open {
+    display: block;
+}
+
+/* Estilo para los enlaces de idiomas */
+.language-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.language-menu ul li {
+    padding: 10px;
+
+}
+
+.language-menu ul li a {
+    color: rgb(14, 1, 1);
+    text-decoration: none;
+    display: block;
+}
+
+/* Efecto hover en los enlaces del selector de idioma */
+.language-menu ul li a:hover {
+    background-color: rgba(216, 19, 19, 0.127);
+    color: rgb(29, 3, 3);
+}
+
+
+
+/* Estilo para el botón de cierre del menú */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: black;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.close-btn:hover {
+    background-color: rgba()
+}
+
+/*@media (max-width: 600px) {
+    .container{
+        width: 100%;
+        height: auto;
+      
+      
+    }
+    .item{
+       width: 100%;
+       height: auto;
+    }
+    .FormContainer{
+        width: 100%;
+       height: auto;
+    
+    }
+    .containerarchi{
+        width: 100%;
+       height: auto;
+    }
+}*/
+@media (max-width: 600px) {
+
+    .back{
+        width: 70%;
+        position: absolute;
+        top: 70px;
+        right: 8vh;
+        font-size: 3vh;
+    }
+    .container{
+        width: 90%;
+        height: auto;
+        background: transparent;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 2rem;
+        
+      
+    }
+    .item{
+    
+        
+        
+        width: calc((100% - 10px) / 2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        
+        
+    }
+    .img{
+        width: 190px;
+        height: 170px;
+        border-radius: 8px;
+        filter: saturate(170%);
+        border: 2px black solid;
+      }
+      .FormContainer{
+        width: 85%;
+      }
+}
+.footer-j {
+    display: flex;
+    background-color: rgb(238, 232, 218);
+    padding: 50px 40px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Glomerolus';
+    position: relative; 
+    margin-top: 1rem;
+}
+
+/* Estilos actuales para pantallas grandes */
+.footer-legal {
+    position: absolute;
+    left: 85rem;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    left: 47%;
+    margin-top: 3vh;
+}
+
+.contacto {
+    position: absolute;
+    left: 45%;
+}
+
+.icon-22{
+    width: 27px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.icon-33 {
+    width: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.legal {
+    text-decoration: none;
+    color: black;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 767px) {
+    .footer-j {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        padding-bottom: 30%;
+        position: static; 
+        font-size: 14px;
+    }
+
+    /* Quitar posiciones absolutas para que fluya vertical */
+    .footer-legal,
+    .social-icons,
+    .contacto {
+        position: static;
+        margin: 10px 0;
+        left: auto;
+        top: auto;
+    }
+
+    .footer-legal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .contacto {
+        font-weight: bold;
+    }
+
+    /* Ajustar iconos para que no sean tan grandes */
+    .icon-22 {
+        width: 24px;
+        margin-left: 5px;
+    }
+
+    .icon-33 {
+        width: 28px;
+        margin-left: 5px;
+    }
+        .container{
+        width: 90%;
+        height: auto;
+        background: transparent;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 4rem;
+        
+      
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1536px) {
+  
+}
+/* Escritorios y portátiles */
+@media (min-width: 1200px) {
+ .footer-legal {
+    position: absolute;
+    left: 85rem;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    left: 47%;
+    margin-top: 3vh;
+}
+
+.contacto {
+    position: absolute;
+    left: 45%;
+}
+
+.icon-22{
+    width: 27px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.icon-33 {
+    width: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.legal {
+    text-decoration: none;
+    color: black;
+}
+}
+
+/* Estilo para la barra de navegación */
+nav {
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.299);
+}
+
+/* Contenedor de los elementos del menú */
+.contenedor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+    z-index: 1001
+}
+
+/* Botón de menú */
+.menu-btn {
+    background: transparent;
+    color: rgba(248, 249, 247, 0.989);
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+/* Icono del botón de menú */
+.menu-btn .icon {
+    margin-right: 8px;
+    filter: invert(97%) sepia(99%) saturate(261%) hue-rotate(299deg) brightness(109%) contrast(97%);
+}
+
+/* Estilos para el menú desplegable */
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: rgb(238, 232, 218);
+    width: 250px;
+    height: 100vh;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Menú abierto */
+.menu.open {
+    display: block;
+    left: 0;
+}
+.close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.menu-btn:focus,
+.close-btn:focus,
+.language-btn:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Estilo para los elementos del menú */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo de los items del menú */
+.menu ul li u {
+   padding: 10px 10px;
+ }
+
+
+/* Estilo para los enlaces del menú */
+.menu ul li a {
+    color: rgb(14, 1, 1);
+    text-decoration: none;
+    display: block;
+    line-height: 1.6;
+}
+
+/* Efecto hover en los enlaces */
+.menu ul li a:hover {
+    background-color: rgba(216, 19, 19, 0.127);
+    color: rgb(24, 2, 2);
+    border-radius: 5px;
+}
+
+ u {
+     font-family: 'Futura';
+     text-decoration: none;
+     
+ }
+
+
+/* Estilo del título */
+h1 {
+    font-size: 30px;
+    font-weight: 800;
+    z-index: 40;
+    color: rgba(249, 247, 247, 0.989);
+    text-align: center;
+    font-family: 'Glomerolus';
+}
+
+.title {
+    font-family: 'Glomerolus';
+    font-size: 40px;
+    color: rgb(242, 232, 208);
+}
+
+.Resto {
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.container-name {
+    background: transparent;
+    color: black;
+    font-size: 18px;
+    font-family: 'Futura';
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+}
+
+.icon-rest {
+    width: 50px;
+    margin: 0;
+    margin-right: 5px;
+    cursor: pointer;
+
+}
+
+
+.linea {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* Estilo de los iconos sociales */
+.social-icons2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icon-2 {
+    width: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+
+.icon-3 {
+    width: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    filter: invert(97%) sepia(99%) saturate(261%) hue-rotate(299deg) brightness(109%) contrast(97%);
+}
+
+.icon-2:hover {
+    transform: translateY(-2px);
+}
+
+.icon-3:hover {
+    transform: translateY(-2px);
+}
+
+img,
+.icon-rest,
+.icon-2,
+.icon-3 {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo del selector de idioma */
+.language-select {
+    position: relative;
+    margin-left: 15px;
+}
+
+/* Botón de idioma */
+.language-btn {
+    background: transparent;
+    color: rgb(232, 216, 216);
+    text-decoration: none;
+    display: block;
+    padding: 5px 5px 0;
+    font-size: 18px;
+    border: 2px rgb(238, 230, 215) solid;
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: center;
+    padding-right: 5px;
+    margin-right: 5px;
+
+
+}
+
+.language-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Menú desplegable de idiomas */
+.language-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgb(238, 230, 215);
+    width: 150px;
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+/* Mostrar el menú de idiomas cuando se activa */
+.language-menu.open {
+    display: block;
+}
+
+/* Estilo para los enlaces de idiomas */
+.language-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.language-menu ul li {
+    padding: 10px;
+
+}
+
+.language-menu ul li a {
+    color: rgb(14, 1, 1);
+    text-decoration: none;
+    display: block;
+}
+
+/* Efecto hover en los enlaces del selector de idioma */
+.language-menu ul li a:hover {
+    background-color: rgba(216, 19, 19, 0.127);
+    color: rgb(29, 3, 3);
+}
+
+/* Flexbox para organizar los elementos dentro de .con--2 */
+.con--2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el botón de cierre del menú */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: black;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.close-btn:hover {
+    background-color: rgba()
+}
+@media (max-width: 420px) {
+ .menu-btn {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+         margin-top: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .menu-btn .icon {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        margin-left: 7px;
+        margin-top: 2px;
+        display: block;
+        filter: invert(97%) sepia(99%) saturate(261%) hue-rotate(299deg) brightness(109%) contrast(97%);
+    }
+    .menu-btn,
+    .language-btn {
+        font-size: 12px;
+        width: 28px;
+        height: 28px;
+    }
+
+    .social-icons {
+        font-size: 12px;
+    }
+
+    .language-btn {
+        padding-right: 2px;
+    }
+
+    .icon-rest {
+        font-size: 12px;
+        width: 28px;
+        height: 28px;
+        margin-bottom: -4px;
+    }
+
+    .title {
+        font-size: 20px;
+        width: 28px;
+        height: 28px;
+        width: 100%;
+    }
+    .menu ul li u {
+         padding: 5px 5px;
+         text-decoration: none;
+           font-size: 25px;
+     }
+
+    u{
+    font-size: 25px;
+}
+    
+
+     .container-name {
+         font-size: 25px;
+     }
+}
+@media (max-width: 768px) {
+    .menu {
+        width: 100vw;
+        height: 100vh;
+        left: -100vw;
+        z-index: 2000; 
+    }
+
+ 
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabaja con Nosotros</title>
+  <link rel="stylesheet" href="css/trabaja.css">
+  <link rel="icon" href="img/Asset 1.png" type="image/png">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    #pageloader-overlay {
+      opacity: 1;
+      top: 0;
+      left: 0;
+      position: fixed;
+      background-color: rgba(255, 255, 255, 1);
+      height: 100%;
+      width: 100%;
+      z-index: 9998;
+      transition: opacity 0.2s linear;
+
+    }
+
+    #pageloader-overlay.hidden {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      z-index: -10000;
+    }
+
+    .loader-wrapper-outer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .loader-hide {
+      animation: fadeOutScale 1s ease forwards;
+    }
+
+    #loader-gif {
+      width: 200px;
+      height: auto;
+    }
+
+    @keyframes fadeOutScale {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+    }
+
+    .contenido {
+      padding: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="pageloader-overlay">
+    <div class="loader-wrapper-outer" style="background-color: rgb(238, 232, 218);">
+      <img id="loader-gif" src="img/IMG-4269G-unscreen.gif" alt="Cargando..." width="100" style="background-color: rgb(238, 232, 218);" >
+    </div>
+  </div>
+   <nav class="nav">
+            <section class="con--2">
+                <!-- Menu -->
+                <div class="contenedor">
+                    <button class="menu-btn" id="menu-toggle">
+                        <img class="icon" src="iconos/menu.svg" alt="Menu" id="menu-icon" data-section="Menu principal" data-value="menu">Menú
+                    </button>
+                    <div class="menu" id="menu">
+                       
+                        <button class="close-btn" id="close-menu">X</button>
+                        <ul>
+            <h3 class="Resto" id="restaurants-title" data-section="Menu principal" data-value="restaurants"
+              style="font-family: 'Glomerolus'; margin-bottom: 10px;"><u >RESTAURANTES</u></h3>
+            <li>
+              <div><a href="esquinapadilla.html" id="item-1" class="item-name">
+
+                  <div class="container-name" style="font-family: 'Glomerolus';">
+                    ESQUINA PADILLA
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li><a href="granada.html" id="item-2">
+                <div class="container-name" style="font-family: 'Glomerolus';">ESQUINA GRANADA</div>
+              </a></li>
+            <li><a href="creando.html" id="item-3">
+                <div class="container-name" style="font-family: 'Glomerolus';">ESQUINA PLAZA CAMAS</div>
+              </a></li>
+               <hr style="width: 80%; margin-left: 20px; margin-bottom: 10px; margin-top: 10px;">
+            <li><a href="creando.html" id="item-4" data-section="Menu principal" data-value="item1">
+                <h3><u>RESERVA DE GRUPOS</u></h3>
+              </a></li>
+            <li><a href="recetaycocina.html" id="item-5" data-section="Menu principal" data-value="item2">
+                <h3><u>RECETA & COCINA</u></h3>
+              </a></li>
+            <li><a href="creando.html" id="item-6" data-section="Menu principal" data-value="item3">
+                <h3><u>FAMILIA</u></h3>
+              </a></li>
+            <li><a href="creando.html" id="item-7" data-section="Menu principal" data-value="item4">
+                <h3><u>HISTORIA & LEGADO</u></h3>
+              </a></li>
+            <li><a href="trabaja.html" id="item-8" data-section="Menu principal" data-value="item5">
+                <h3><u>TRABAJA CON NOSOTROS</u></h3>
+              </a></li>
+          </ul>
+                    </div>
+                </div>
+                <!-- Titulo --><a href="index.html" style="text-decoration: none;">
+    <h1 class="title" id="title" >
+        <img src="img/Asset 1.png" class="icon-rest"> GRUPO AM
+    </h1>
+</a>
+                <div class="social-icons2">
+                    <a href="https://www.instagram.com/grupoamsl/" target="_blank"> <img class="icon-2"
+                            src="iconos/instagram.svg" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@grupoamsl?_t=ZN-8vS4LksSJqo&_r=1" target="_blank"><img
+                            class="icon-3" src="iconos/tiktok.svg" alt="TikTok"></a>
+
+
+                    <!-- Menú de selección de idioma -->
+                    <div class="language-select">
+                        <button class="language-btn" id="language-toggle">ES</button>
+                        <div class="language-menu" id="language-menu">
+                            <ul>
+                                <li class="opcion"><a href="#" id="language-es" data-language="es"><span>ES</span></a></li>
+                                <li class="opcion"><a href="#" id="language-en" data-language="en"><span>EN</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <hr>
+        </nav>
+
+
+ 
+    <h1 class="back" >TRABAJA CON NOSOSTROS</h1>
+ 
+
+  <div class="container" style="margin-top: 20vh;">
+    <div class="item"><a href="formularioS.html" class="name"><img src="img/Salon.jpg" class="img" alt="Salon"></a>
+    </div>
+    <div class="item"><a href="formularioc.html" class="name"> <img src="img/Cocina.jpg" class="img" alt="Cocina"></a>
+    </div>
+    <div class="item"><a href="formulariog.html" class="name"> <img src="img/Gerencia.jpg" class="img"
+          alt="GERENCIA"></a>
+    </div>
+    <div class="item"><a href="formulariom.html" class="name"><img src="img/Marketing.jpg" class="img"
+          alt="Marketing"></a>
+    </div>
+  </div>
+
+
+    <footer class="footer-j">
+    <div class="foot">By Grupo AM</div>
+    <div class="foot">Todos los derechos reservados.</div>
+    <div class="contacto">MANTENTE EN CONTACTO</div>
+    <div class="social-icons">
+       <a href="https://www.instagram.com/grupoamsl/" target="_blank"> <img class="icon-22" src="iconos/logotipo-de-instagram.png"
+          alt="Instagram"></a>
+      <a href="https://www.tiktok.com/@grupoamsl?_t=ZN-8vS4LksSJqo&_r=1" target="_blank"><img class="icon-33"
+          src="iconos/tiktok.svg" alt="TikTok"></a>
+    </div>
+    <div class="footer-legal">
+      <div ><a href="avisoLegal.html" class="legal">Aviso Legal</a></div>
+      <div> <a href="quienessomos.html" class="legal">¿Quiénes somos?</a></div>
+      <div><a href="trabaja.html" class="legal">Trabaja con nosotros</a></div>
+    </div>
+  </footer>
+  
+  <script>
+    $(document).ready(function () {
+      const $overlay = $('#pageloader-overlay');
+      const $gif = $('#loader-gif');
+
+      setTimeout(function () {
+        $gif.addClass('loader-hide');
+
+        setTimeout(function () {
+          $overlay.addClass('hidden');
+        }, 1000);
+      }, 2000);
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      const $overlay = $('#pageloader-overlay');
+      const $gif = $('#loader-gif');
+
+      setTimeout(function () {
+        $gif.addClass('loader-hide');
+
+        setTimeout(function () {
+          $overlay.addClass('hidden');
+        }, 1000);
+      }, 2000);
+    });
+  </script>
+   <script src="js/main.js"></script>
+</body>
+
+</html>

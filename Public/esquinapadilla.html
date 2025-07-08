@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esquina Padilla</title>
+  <link rel="stylesheet" href="css/padilla.css">
+  <link rel="icon" href="img/Asset 1.png" type="image/png">
+  <!--Script,style y escript final preloader-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    #pageloader-overlay {
+      opacity: 1;
+      top: 0;
+      left: 0;
+      position: fixed;
+      background-color: rgba(255, 255, 255, 1);
+      height: 100%;
+      width: 100%;
+      z-index: 9998;
+      transition: opacity 0.2s linear;
+
+
+    }
+
+    #pageloader-overlay.hidden {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      z-index: -10000;
+    }
+
+    .loader-wrapper-outer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .loader-hide {
+      animation: fadeOutScale 1s ease forwards;
+    }
+
+    #loader-gif {
+      width: 200px;
+      height: auto;
+    }
+
+    @keyframes fadeOutScale {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+    }
+  </style>
+</head>
+
+<body class="section-esquina">
+
+  <div id="pageloader-overlay">
+    <div class="loader-wrapper-outer" style="background-color: rgb(238, 232, 218);">
+      <img id="loader-gif" src="img/IMG-4269G-unscreen.gif" alt="Cargando..." width="100"
+        style="background-color: rgb(238, 232, 218);">
+    </div>
+  </div>
+  <nav class="nav">
+            <section class="con--2">
+                <!-- Menu -->
+                <div class="contenedor">
+                    <button class="menu-btn" id="menu-toggle">
+                        <img class="icon" src="iconos/menu.svg" alt="Menu" id="menu-icon" data-section="Menu principal" data-value="menu">Menú
+                    </button>
+                    <div class="menu" id="menu">
+                       
+                        <button class="close-btn" id="close-menu">X</button>
+                        <ul>
+            <h3 class="Resto" id="restaurants-title" data-section="Menu principal" data-value="restaurants"
+              style="font-family: 'Glomerolus'; margin-bottom: 10px;"><u >RESTAURANTES</u></h3>
+            <li>
+              <div><a href="esquinapadilla.html" id="item-1" class="item-name">
+
+                  <div class="container-name" style="font-family: 'Glomerolus';">
+                    ESQUINA PADILLA
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li><a href="granada.html" id="item-2">
+                <div class="container-name" style="font-family: 'Glomerolus';">ESQUINA GRANADA</div>
+              </a></li>
+            <li><a href="creando.html" id="item-3">
+                <div class="container-name" style="font-family: 'Glomerolus';">ESQUINA PLAZA CAMAS</div>
+              </a></li>
+               <hr style="width: 80%; margin-left: 20px; margin-bottom: 10px; margin-top: 10px;">
+            <li><a href="creando.html" id="item-4" data-section="Menu principal" data-value="item1">
+                <h3><u>RESERVA DE GRUPOS</u></h3>
+              </a></li>
+            <li><a href="recetaycocina.html" id="item-5" data-section="Menu principal" data-value="item2">
+                <h3><u>RECETA & COCINA</u></h3>
+              </a></li>
+            <li><a href="creando.html" id="item-6" data-section="Menu principal" data-value="item3">
+                <h3><u>FAMILIA</u></h3>
+              </a></li>
+            <li><a href="creando.html" id="item-7" data-section="Menu principal" data-value="item4">
+                <h3><u>HISTORIA & LEGADO</u></h3>
+              </a></li>
+            <li><a href="trabaja.html" id="item-8" data-section="Menu principal" data-value="item5">
+                <h3><u>TRABAJA CON NOSOTROS</u></h3>
+              </a></li>
+          </ul>
+                    </div>
+                </div>
+                <!-- Titulo -->
+               <a href="index.html" style="text-decoration: none;">
+    <h1 class="title" id="title" >
+        <img src="img/Asset 1.png" class="icon-rest"> GRUPO AM
+    </h1>
+</a>
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/grupoamsl/" target="_blank"> <img class="icon-2"
+                            src="iconos/instagram.svg" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@grupoamsl?_t=ZN-8vS4LksSJqo&_r=1" target="_blank"><img
+                            class="icon-3" src="iconos/tiktok.svg" alt="TikTok"></a>
+
+
+                    <!-- Menú de selección de idioma -->
+                    <div class="language-select">
+                        <button class="language-btn" id="language-toggle">ES</button>
+                        <div class="language-menu" id="language-menu">
+                            <ul>
+                                <li class="opcion"><a href="#" id="language-es" data-language="es"><span>ES</span></a></li>
+                                <li class="opcion"><a href="#" id="language-en" data-language="en"><span>EN</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <hr>
+        </nav>
+
+  <!-- Contenedor principal para las secciones en paralelo -->
+  <section class="contenedor1" data-section="Restaurantes" data-value="description">
+    <p>Hay esquinas que no se buscan, se encuentran. Padilla fue eso: una revelación entre pasos y tambores de Semana
+      Santa. Con alma de bodegón y el rumor de la cocina que nunca se calla, este fue el origen de todo. Aquí nacieron
+      nuestras primeras recetas y miles de historias que aún flotan en el aire.
+
+    </p>
+  </section>
+
+
+  <section class="sections-paralel">
+    <div class="image-section">
+      <a href="pdf/CartaP_merged.pdf" target="_blank"><img src="img/fondo.png" class="img" alt="Carta">
+        <div class="carta" data-section="Restaurantes" data-value="item15">CARTA</div>
+      </a>
+
+    </div>
+    <div class="image-section">
+      <a href="https://reserve.dish.co/321868" target="_blank">
+        <img src="img/fondo.png" class="img" alt="Reserva">
+        <div class="carta" data-section="Restaurantes" data-value="item16">RESERVA</div>
+
+      </a>
+    </div>
+
+    <div class="image-section">
+      <iframe class="img" style="border: 2px rgb(163, 51, 59)solid;"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.961024970023!2d-4.42298912470061!3d36.72349727202042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f7b0d8a80f61%3A0xd1a1972fe3d2b9e5!2sRestaurante%20Esquina%20Padilla!5e0!3m2!1ses!2ses!4v1743789448665!5m2!1ses!2ses"
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+
+  <div class="rh">
+    <div class="conte" style="width: 50%; height: 25%;">
+      <div class="carrusel">
+        <h2 data-section="Restaurantes" data-value="item6">RESEÑAS</h2>
+        <div class="atras">
+          <img id="atras" src="iconos/adelante.svg" alt="atras" loading="lazy">
+        </div>
+
+
+        <div class="imagenes">
+          <div id="img1">
+            <img src="img/r1.jpg" alt="img1" class="img5" loading="lazy">
+          </div>
+          <div id="img2">
+            <img src="img/r10.jpg" alt="img12" class="img3" loading="lazy">
+          </div>
+          <div id="img3">
+            <img src="img/r11.jpg" alt="img12" class="img4" loading="lazy">
+          </div>
+          <div id="img4">
+            <img src="img/r2.jpg" alt="img12" class="img5" loading="lazy">
+          </div>
+          <div id="img5">
+            <img src="img/r3.jpg" alt="img12" class="img5" loading="lazy">
+          </div>
+          <div id="img6">
+            <img src="img/r4.jpg" alt="img12" class="img5" loading="lazy">
+          </div>
+          <div id="img7">
+            <img src="img/r5.jpg" alt="img12" class="img5" loading="lazy">
+          </div>
+          <div id="img8">
+            <img src="img/r6.jpg" alt="img12" class="img5" loading="lazy">
+          </div>
+          <div id="img9">
+            <img src="img/r7.jpg" alt="img12" class="img5" loading="lazy">
+          </div>
+          <div id="img10">
+            <img src="img/r8.jpg" alt="img12" class="img5" loading="lazy">
+          </div>
+          <div id="img11">
+            <img src="img/r9.jpg" alt="img12" class="img5" loading="lazy">
+          </div>
+        </div>
+        <div class="adelante" id="adelante">
+          <img src="iconos/atras.svg" alt="adelante" loading="lazy">
+        </div>
+        <div class="puntos" id="puntos"></div>
+      </div>
+    </div>
+
+    <div class="cont1">
+      <div class="horarios">
+        <h2 data-section="Restaurantes" data-value="item7">HORARIOS</h2>
+        <div><strong data-section="Restaurantes" data-value="item8">Lunes:</strong> <span class="horas"
+            data-section="Restaurantes" data-value="item8b">13:00-23:30</span></div>
+        <div><strong data-section="Restaurantes" data-value="item9">Martes:</strong> <span class="horas"
+            data-section="Restaurantes" data-value="item9b">Cerrado</span></div>
+        <div><strong data-section="Restaurantes" data-value="item10">Miércoles:</strong> <span class="horas"
+            data-section="Restaurantes" data-value="item10c">13:00-23:30</span></div>
+        <div><strong data-section="Restaurantes" data-value="item11">Jueves:</strong> <span class="horas"
+            data-section="Restaurantes" data-value="item11b">13:00-23:30</span></div>
+        <div><strong data-section="Restaurantes" data-value="item12">Viernes:</strong> <span class="horas"
+            data-section="Restaurantes" data-value="item12b">13:00-23:30</span></div>
+        <div><strong data-section="Restaurantes" data-value="item13">Sábado:</strong> <span class="horas"
+            data-section="Restaurantes" data-value="item13b">13:00-23:30</span></div>
+        <div><strong data-section="Restaurantes" data-value="item14">Domingo:</strong> <span class="horas"
+            data-section="Restaurantes" data-value="item14b">13:00-23:30</span></div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="footer-j">
+    <div class="foot">By Grupo AM<br> Todos los derechos reservados.</div>
+   <div class="contacto">
+    MANTENTE EN CONTACTO
+    <div class="social-icons2">
+        <a href="https://www.instagram.com/grupoamsl/" target="_blank">
+            <img class="icon" src="iconos/logotipo-de-instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com/@grupoamsl?_t=ZN-8vS4LksSJqo&_r=1" target="_blank">
+            <img class="icon1" src="iconos/tiktok.svg" alt="TikTok">
+        </a>
+    </div>
+</div>
+    <div class="footer-legal">
+      <div ><a href="avisoLegal.html" class="legal">Aviso Legal</a></div>
+      <div> <a href="quienessomos.html" class="legal">¿Quiénes somos?</a></div>
+      <div><a href="trabaja.html" class="legal">Trabaja con nosotros</a></div>
+    </div>
+  </footer>
+  <script src="js/padilla.js"> </script>
+
+  <script>
+    $(document).ready(function () {
+      const $overlay = $('#pageloader-overlay');
+      const $gif = $('#loader-gif');
+
+      setTimeout(function () {
+        $gif.addClass('loader-hide');
+
+        setTimeout(function () {
+          $overlay.addClass('hidden');
+        }, 1000);
+      }, 2000);
+    });
+  </script>
+
+</body>
+
+</html>
